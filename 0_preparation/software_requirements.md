@@ -5,11 +5,11 @@ While many of the hands-on activities will be run on Comet, some sessions requir
 ## Contents
  * [Preparation: Install `git`](#git)
  * [Preparation: Obtain a GitHub Account](#github)
- * [Preparation: Anaconda for Jupyter Notebooks](#anaconda)
  * [Plenary session: An Introduction to Singularity](#singularity)
- * [Plenary session: SeedMe2: Creating data centric websites for researchers and research projects](#seedme)
+ * [Preparation: Anaconda for Jupyter Notebooks](#anaconda)
  * [Parallel sessions: Machine Learning Overview](#mach-learn)
  * [Parallel session: Scientific visualization with Visit ](#visit)
+ * [Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects](#seedme)
 
 
 ### Preparation: Install `git` <a name="git"></a>
@@ -77,13 +77,6 @@ consider obtaining one prior to attending the Summer Institute. How you can
 integrate `git` and GitHub into your work will be covered in both an 
 introductory and advanced training session on these tools.
 
-### Preparation: Anaconda for Jupyter Notebooks <a name="anaconda"></a>
-Some sessions and tutorials will be using Jupyter Notebooks. To learn more, see Jupyter/IPython Notebook Quick Start Guide:
-[https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html)
-
-The Jupyter Notebook App can be installed using a scientific python distribution which also includes scientific python packages. The most common distribution is called Anaconda. To download:
-[https://www.anaconda.com/download/](https://www.anaconda.com/download/)
-
 ### Preparation: Install VirtualBox for *An Introduction to Singularity*: <a name="singularity"></a>
 
 If you plan to attend the introductory training session on [Singularity](https://singularity.lbl.gov/)
@@ -103,8 +96,12 @@ and running your first (Linux) virtual machine as outlined in the
 We recommend you create your Linux virtual machine using either the
 [Ubuntu 16.04 LTS](http://releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso) or [CentOS 7](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso) operating system distributions.
 
-### Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects <a name="seedme"></a>
-Latest web browser is needed for this session.
+### Preparation: Anaconda for Jupyter Notebooks <a name="anaconda"></a>
+Some sessions and tutorials will be using Jupyter Notebooks. To learn more, see Jupyter/IPython Notebook Quick Start Guide:
+[https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html)
+
+The Jupyter Notebook App can be installed using a scientific python distribution which also includes scientific python packages. The most common distribution is called Anaconda. To download:
+[https://www.anaconda.com/download/](https://www.anaconda.com/download/)
 
 ### Parallel session: Machine Learning Overview (scheduled opposite Scientific Visualization with Visit) <a name="mach-learn"></a>
 
@@ -133,4 +130,7 @@ Participants who will be attending the Scientific visualization with Visit sessi
     Linux and Mac: ~/.visit/hosts/  
     Windows: C:/users/username/Documents/visit/hosts/   
     Restart VisIt
+
+### Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects <a name="seedme"></a>
+Latest web browser is needed for this session.
 
