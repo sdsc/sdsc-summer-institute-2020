@@ -16,11 +16,11 @@ To help you get the most out of your week, this section containes a set of detai
 
 ## Software Requirements:
 The document below contains a list of software being used at the institute and installation instructions:
-* [software_requirements.md](https://github.com/sdsc/sdsc-summer-institute-2019/blob/master/0_preparation/software_requirements.md)
+* [software_requirements.md](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
 
 ## Preparation Activities:
 
 The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
 
-* [getting_stared](https://github.com/sdsc/sdsc-summer-institute-2019/tree/master/0_preparation/getting_started)
-* [basic_linux_skills](https://github.com/sdsc/sdsc-summer-institute-2019/tree/master/0_preparation/basic_linux_skills)
+* [getting_stared](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/getting_started)
+* [basic_linux_skills](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/basic_linux_skills)
