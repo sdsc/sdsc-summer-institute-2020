@@ -5,7 +5,7 @@ To help you get the most out of your week, this section contains a set of detail
 
 ##  Computer Requirements:
 * We would recommend a second screen for the hands-on sessions. The first to view the presentation, the second for hands-on. 
-** Using dual monitors with Zoom: (https://support.zoom.us/hc/en-us/articles/201362583-Using-Dual-Monitors-with-the-Zoom-Desktop-Client).
+<br/> Using dual monitors with Zoom: (https://support.zoom.us/hc/en-us/articles/201362583-Using-Dual-Monitors-with-the-Zoom-Desktop-Client).
 
 * For visualization tutorial a mouse with scroll wheel is highly recommended (laptop track pads are very difficult to use for 3D navigation).
 
