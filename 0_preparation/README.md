@@ -26,6 +26,14 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 ### Other Skills
 See the [Basic HPC Skills repo](https://github.com/sdsc-hpc-training-org/basic_skills)
 https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/basic_linux_skills
+
+* [Connecting to HPC Systems](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/connecting-to-hpc-systems)
+* [basic_linux_skills](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/basic_linux_skills)
+* [Interactive Computing](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/interactive_computing)
+* [How to Run Notebooks on Comet](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/how_to_run_notebooks_on_comet)
+* [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
+
+
+#### old
 * [getting_started](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/getting_started)
 
-* [basic_linux_skills](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/basic_linux_skills)
