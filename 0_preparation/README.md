@@ -19,5 +19,13 @@ The document below contains a list of software being used at the institute and i
 ## Preparation Activities:
 The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
 
+### Comet User Guide
+Please read the Comet user guide and familiarize yourself with the hardware, file systems, batch job submission, compilers and modules. The guide can be found here:
+* [Comet User Guide](http://www.sdsc.edu/support/user_guides/comet.html)
+
+### Other Skills
+See the [Basic HPC Skills repo](https://github.com/sdsc-hpc-training-org/basic_skills)
+https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/basic_linux_skills
 * [getting_started](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/getting_started)
+
 * [basic_linux_skills](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/basic_linux_skills)
