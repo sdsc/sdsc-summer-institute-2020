@@ -1,4 +1,4 @@
-# Preparing for the Summer Institute:  Basic Linux Skills
+# Using SDSC HPC Resources:  Basic Linux Skills
 [//]: # " Comment example "
 
 [//]: # ( Comment2 )
@@ -7,10 +7,10 @@ When you log on to Comet, your computer operating system will be a Unix shell. \
 
 Basic Linux skills are necessary to complete the hands-on exercises. If it’s been a while since you’ve worked in a Linux environment, be sure to reacquaint yourself with the following topic (many of which are demonstrated below)s: copying, listing, deleting and renaming files; using wildcards; navigating directories; changing file permissions; setting environment variables; using common utilities (grep, cat, less, head, sort, tar, gzip). A nice tutorial can be found here http://www.ee.surrey.ac.uk/Teaching/Unix/. You should also be comfortable with one of the standard Linux editors, such as vim, emacs, or nano.
 
-You should also be comfortable with one of the standard Linux editors, such as vim, emacs, or nano.
+You should also be comfortable with one of the standard Linux editors, such as `vim`, `emacs`, or `nano`.
 
 Notes:
-* For the examples below, we are using the `bash` shell, which is the default shell for new accounts on Comet. For the purposes of the Institute exercises, please do not change the shell.
+* For the examples below, we are using the `bash` shell, which is the default shell for new accounts on Comet. For the purposes of following SDSC tutorials and exercises, please do not change the shell.
 
 <a name="top">**Examples::**
 * [Basic Environment](#basic-env)
@@ -21,7 +21,7 @@ Notes:
 * [Common Utilities](#common-utilities)
 
 
-Note: if you have difficulties completing this task, please contact Institute staff at <consult@sdsc.edu>.
+Note: if you have difficulties completing this task, please contact staff at <consult@sdsc.edu>.
 <hr>
 
 ## <a name="basic-env">Basic Environment</a>
