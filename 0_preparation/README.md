@@ -4,9 +4,7 @@ You will get the most out of the SDSC Summer Institute if you are prepared prior
 To help you get the most out of your week, this section contains a set of detailed start-up instructions, beginning with setting up your account and connecting to Comet to configuring your laptop for running visualization software. Please read the documents and exercises carefully, and complete all necessary steps before event. Feel free to ask questions or if you have any problems with the start-up tasks
 
 ##  Computer Requirements:
-* We would recommend a second screen for the hands-on sessions. The first to view the presentation, the second for hands-on. 
-<br/> Using dual monitors with Zoom: (https://support.zoom.us/hc/en-us/articles/201362583-Using-Dual-Monitors-with-the-Zoom-Desktop-Client).
-
+* We would recommend a second screen for the hands-on sessions. The first to view the presentation, the second for hands-on.
 * For visualization tutorial a mouse with scroll wheel is highly recommended (laptop track pads are very difficult to use for 3D navigation).
 
 ##  Account Requirements:
