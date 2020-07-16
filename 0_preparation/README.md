@@ -14,10 +14,11 @@ Note: if you have any difficulties completing these tasks, please contact Instit
 
 ##  Github Account: 
 * If you do not already have a GitHub account, please create one. 
+See: [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
 
 ## Software Requirements:
 The document below contains a list of software being used at the institute and installation instructions:
-* [software_requirements.md](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
+* [Software_Requirements](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
 
 ## Preparation Activities:
 The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
