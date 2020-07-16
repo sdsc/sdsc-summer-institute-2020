@@ -2,7 +2,7 @@
 
 While many of the hands-on activities will be run on Comet, some sessions require that customized software be installed on your laptop. Please perform the following software installations and file downloads prior to the event. Note: several of the preparation activities will provide information and guidance on how to install the required software components.
 
-## Contents
+## Contents <a name="top"></a>
  * [Preparation: Using GitHub](#github)
  * [Plenary session: An Introduction to Singularity](#singularity)
  * [Preparation: Using Jupyter Notebooks](#anaconda)
@@ -14,6 +14,9 @@ While many of the hands-on activities will be run on Comet, some sessions requir
 ### Using GitHub<a name="github"></a>
 
 See this quick-start guide: https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/using_github
+
+[Back to Top](#top)
+<hr>
 
 ### Preparation: Install VirtualBox for *An Introduction to Singularity*: <a name="singularity"></a>
 
@@ -34,12 +37,18 @@ and running your first (Linux) virtual machine as outlined in the
 We recommend you create your Linux virtual machine using either the
 [Ubuntu 16.04 LTS](http://releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso) or [CentOS 7](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso) operating system distributions.
 
+[Back to Top](#top)
+<hr>
+
 ### Preparation: Anaconda for Jupyter Notebooks <a name="anaconda"></a>
 Some sessions and tutorials will be using Jupyter Notebooks. To learn more, see Jupyter/IPython Notebook Quick Start Guide:
 [https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html)
 
 The Jupyter Notebook App can be installed using a scientific python distribution which also includes scientific python packages. The most common distribution is called Anaconda. To download:
 [https://www.anaconda.com/download/](https://www.anaconda.com/download/)
+
+[Back to Top](#top)
+<hr>
 
 ### Parallel session: Machine Learning Overview (scheduled opposite Scientific Visualization with Visit) <a name="mach-learn"></a>
 
@@ -50,6 +59,8 @@ A basic understanding of R will be very helpful and we recommend the following r
 * https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf
 * https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 
+[Back to Top](#top)
+<hr>
 
 ### Parallel session: Scientific visualization with Visit (scheduled opposite Machine Learning Overview) <a name="visit"></a>
 
@@ -68,6 +79,9 @@ Participants who will be attending the Scientific visualization with Visit sessi
     Linux and Mac: ~/.visit/hosts/  
     Windows: C:/users/username/Documents/visit/hosts/   
     Restart VisIt
+
+[Back to Top](#top)
+<hr>
 
 ### Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects <a name="seedme"></a>
 Latest web browser is needed for this session.
