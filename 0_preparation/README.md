@@ -12,6 +12,9 @@ Note: if you have any difficulties completing these tasks, please contact Instit
 ##  Account Requirements:
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
 
+##  Github Account: 
+* If you do not already have a GitHub account, please create one. 
+
 ## Software Requirements:
 The document below contains a list of software being used at the institute and installation instructions:
 * [software_requirements.md](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
