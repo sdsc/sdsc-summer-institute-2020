@@ -3,6 +3,8 @@ You will get the most out of the SDSC Summer Institute if you are prepared prior
 
 To help you get the most out of your week, this section contains a set of detailed start-up instructions, beginning with setting up your account and connecting to Comet to configuring your laptop for running visualization software. Please read the documents and exercises carefully, and complete all necessary steps before event. Feel free to ask questions or if you have any problems with the start-up tasks
 
+Note: if you have any difficulties completing these tasks, please contact Institute staff at consult@sdsc.edu.
+
 ##  Computer Requirements:
 * We would recommend a second screen for the hands-on sessions. The first to view the presentation, the second for hands-on.
 * For visualization tutorial a mouse with scroll wheel is highly recommended (laptop track pads are very difficult to use for 3D navigation).
@@ -25,14 +27,11 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 See the [Basic HPC Skills repo](https://github.com/sdsc-hpc-training-org/basic_skills)
 https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/basic_linux_skills
 
-* [Connecting to HPC Systems](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/connecting-to-hpc-systems)
-* [basic_linux_skills](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/basic_linux_skills)
+* [Connecting to HPC Systems](https://github.com/sdsc-hpc-training-org/hpc-security/blob/master/connecting-to-hpc-systems/connect-to-comet.md)
+* [Basic_Linux_Skills](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/basic_linux_skills)
 * [Interactive Computing](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/interactive_computing)
 * [How to Run Notebooks on Comet](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/how_to_run_notebooks_on_comet)
 * [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
 
-
-#### old
-* [getting_started](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/getting_started)
 
 
