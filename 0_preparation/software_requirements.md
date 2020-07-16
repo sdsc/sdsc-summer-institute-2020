@@ -3,6 +3,8 @@
 While many of the hands-on activities will be run on Comet, some sessions require that customized software be installed on your laptop. Please perform the following software installations and file downloads prior to the event. Note: several of the preparation activities will provide information and guidance on how to install the required software components.
 
 ## Contents <a name="top"></a>
+
+ * [Preparation: Using Gitter](#gitter)
  * [Preparation: Using GitHub](#github)
  * [Plenary session: An Introduction to Singularity](#singularity)
  * [Preparation: Using Jupyter Notebooks](#notebooks)
@@ -10,6 +12,9 @@ While many of the hands-on activities will be run on Comet, some sessions requir
  * [Parallel session: Scientific visualization with Visit ](#visit)
  * [Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects](#seedme)
 
+
+### Gitter Chat Room <a name="gitter"></a>
+Chat room https://gitter.im/sdsc-summer-institute-2020/community (login with your Github account)
 
 ### Using GitHub<a name="github"></a>
 
