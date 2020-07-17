@@ -16,6 +16,10 @@ Note: if you have any difficulties completing these tasks, please contact Instit
 * If you do not already have a GitHub account, please create one. 
 See: [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
 
+## Loggin onto the Comet Portal
+Must have an XSEDE account.
+See https://portal.comet.sdsc.edu
+
 ## Software Requirements:
 The document below contains a list of software being used at the institute and installation instructions:
 * [Software_Requirements](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
