@@ -50,7 +50,7 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 <hr>
 
 ##  Account Requirements: <a name="accounts"></a>
-* XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to your prior to the Preparation Day, Wednesday, July 22nd.
+* XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to you prior to the Preparation Day, Wednesday, July 22nd.
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
 
 [Back to Top](#top)
