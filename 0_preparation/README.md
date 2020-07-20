@@ -12,8 +12,8 @@ Note: if you have any difficulties completing these tasks, please contact Instit
 ##  Account Requirements:
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
 
-## Loggin onto the Comet Portal
-XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to your prior to the Preparation Day, Wednesday, July 22nd. Once you have received the email, please go to https://portal.comet.sdsc.edu, to confirm you login. 
+## Loggin onto the Comet Portal:
+XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to your prior to the Preparation Day, Wednesday, July 22nd. Once you have received the email, please go to https://portal.comet.sdsc.edu, to confirm your login. 
 
 ##  Github Account: 
 * If you do not already have a GitHub account, please create one. 
