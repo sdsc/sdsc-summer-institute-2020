@@ -70,11 +70,13 @@ A basic understanding of R will be very helpful and we recommend the following r
 
 ### Parallel session: Scientific visualization with Visit (scheduled opposite Machine Learning Overview) <a name="visit"></a>
 
-Participants who will be attending the Scientific visualization with Visit session on Thursday morning should make the following preparations.
+Participants who will be attending the Scientific visualization with Visit session should make the following preparations.
 
-* Computer, mouse with scroll wheel are required (tablets are not sufficient for this tutorial).
+* Computer, a mouse with scroll wheel is strongly recommended.
 
-* [Download](https://wci.llnl.gov/simulation/computer-codes/visit/executables) and install VisIt version 3.0.1 (**the latest version**). Please do not compile from source unless you are adventurous
+* [Download](https://wci.llnl.gov/simulation/computer-codes/visit/executables) and install VisIt. Please do not compile from source unless you are adventurous.
+   ** On Mac OS Mojave install version 3.1.2
+   ** On all other Operating systems install version 3.0.1. 
 
 * Test run VisIt application on your laptop to make sure it works
 
