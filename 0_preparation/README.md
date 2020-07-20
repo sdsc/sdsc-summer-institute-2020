@@ -17,7 +17,7 @@ Note: if you have any difficulties completing these tasks, please contact Instit
 See: [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
 
 ## Loggin onto the Comet Portal
-Must have an XSEDE account.
+Must have an XSEDE account. Login information for this will be sent via email as well. 
 See https://portal.comet.sdsc.edu
 
 ## Software Requirements:
