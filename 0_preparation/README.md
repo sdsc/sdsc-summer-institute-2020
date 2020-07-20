@@ -11,18 +11,18 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 
 * Welcome (Susan)
 * Tech Checks:
-Zoom. (Cindy)
-GitHub (Mary)
+  - Zoom. (Cindy)
+  - GitHub (Mary)
 * Accounts
-user environment (Mahi, Marty, Nicole)
-logging onto Comet. (Mary, Mahi, Marty, Nicole, Scott)
-logging onto Comet Portal (Mary, Marty, Subha, Scott)
+  - User environment (Mahi, Marty, Nicole)
+  - Logging onto Comet. (Mary, Mahi, Marty, Nicole, Scott)
+  - Logging onto Comet Portal (Mary, Marty, Subha, Scott)
 * Software Requirements Overview (Mahi or Marty?)
   - Gitter (Cindy?)
   - Launch R
   - Launch notebooks? (Mary)
 
-Note: if you have any difficulties completing these tasks, please contact Institute staff at consult@sdsc.edu.
+Note: if you have any difficulties getting set up, please contact Institute staff at consult@sdsc.edu.
 
 ### Comet User Guide
 Please read the Comet user guide and familiarize yourself with the hardware, file systems, batch job submission, compilers and modules. The guide can be found here:
