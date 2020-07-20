@@ -7,14 +7,14 @@ To help you get the most out of your week, this section contains a set of detail
 The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
 
 <a name="top">Contents
-* Prep Day Schedule (#prep-day)
-* Comet User Guide (#comet-guide)
-* Computer Requirements (#computer-req)
-* Account Requirements (#accounts)
-* Logging onto the Comet Portal: (#portal)
-* Github Account (#github)
-* Software Requirements (#software)
-* Other Skills (#other-skills)
+* [Prep Day Schedule](#prep-day)
+* [Comet User Guide](#comet-guide)
+* [Computer Requirements](#computer-req)
+* [Account Requirements](#accounts)
+* [Logging onto the Comet Portal](#portal)
+* [Github Account](#github)
+* [Software Requirements](#software)
+* [Other Skills](#other-skills)
 
 
 ## Prep Day Schedule (proposed): <a name="prep-day"></a>
