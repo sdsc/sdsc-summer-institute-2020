@@ -3,7 +3,31 @@ You will get the most out of the SDSC Summer Institute if you are prepared prior
 
 To help you get the most out of your week, this section contains a set of detailed start-up instructions, beginning with setting up your account and connecting to Comet to configuring your laptop for running visualization software. Please read the documents and exercises carefully, and complete all necessary steps before event. Feel free to ask questions or if you have any problems with the start-up tasks
 
+## Preparation Activities:
+The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
+
+
+## Prep Day Schedule (proposed):
+
+* Welcome (Susan)
+* Tech Checks:
+Zoom. (Cindy)
+GitHub (Mary)
+* Accounts
+user environment (Mahi, Marty, Nicole)
+logging onto Comet. (Mary, Mahi, Marty, Nicole, Scott)
+logging onto Comet Portal (Mary, Marty, Subha, Scott)
+* Software Requirements Overview (Mahi or Marty?)
+  - Gitter (Cindy?)
+  - Launch R
+  - Launch notebooks? (Mary)
+
 Note: if you have any difficulties completing these tasks, please contact Institute staff at consult@sdsc.edu.
+
+### Comet User Guide
+Please read the Comet user guide and familiarize yourself with the hardware, file systems, batch job submission, compilers and modules. The guide can be found here:
+* [Comet User Guide](http://www.sdsc.edu/support/user_guides/comet.html)
+
 
 ##  Computer Requirements:
 * We would recommend a second screen for the hands-on sessions. The first to view the presentation, the second for hands-on.
@@ -23,12 +47,6 @@ See: [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/m
 The document below contains a list of software being used at the institute and installation instructions:
 * [Software_Requirements](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
 
-## Preparation Activities:
-The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
-
-### Comet User Guide
-Please read the Comet user guide and familiarize yourself with the hardware, file systems, batch job submission, compilers and modules. The guide can be found here:
-* [Comet User Guide](http://www.sdsc.edu/support/user_guides/comet.html)
 
 ### Other Skills
 See the [Basic HPC Skills repo](https://github.com/sdsc-hpc-training-org/basic_skills)
