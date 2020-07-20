@@ -6,8 +6,18 @@ To help you get the most out of your week, this section contains a set of detail
 ## Preparation Activities:
 The Summer Institute is a combination of in-depth lectures and hands-on learning. The following documents will guide you through the necessary steps needed to be prepared to get to work when you arrive at the Institute.
 
+<a name="top">Contents
+* Prep Day Schedule (#prep-day)
+* Comet User Guide (#comet-guide)
+* Computer Requirements (#computer-req)
+* Account Requirements (#accounts)
+* Logging onto the Comet Portal: (#portal)
+* Github Account (#github)
+* Software Requirements (#software)
+* Other Skills (#other-skills)
 
-## Prep Day Schedule (proposed):
+
+## Prep Day Schedule (proposed): <a name="prep-day"></a>
 
 * Welcome (Susan)
 * Tech Checks:
@@ -24,31 +34,47 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 
 Note: if you have any difficulties getting set up, please contact Institute staff at consult@sdsc.edu.
 
-### Comet User Guide
+## Comet User Guide <a name="comet-guide"></a>
 Please read the Comet user guide and familiarize yourself with the hardware, file systems, batch job submission, compilers and modules. The guide can be found here:
 * [Comet User Guide](http://www.sdsc.edu/support/user_guides/comet.html)
 
+[Back to Top](#top)
+<hr>
 
-##  Computer Requirements:
+##  Computer Requirements: <a name="computer-req"></a>
 * We would recommend a second screen for the hands-on sessions. The first to view the presentation, the second for hands-on.
 * For visualization tutorial a mouse with scroll wheel is highly recommended (laptop track pads are very difficult to use for 3D navigation).
 
-##  Account Requirements:
+[Back to Top](#top)
+<hr>
+
+##  Account Requirements: <a name="accounts"></a>
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
 
-## Loggin onto the Comet Portal:
+[Back to Top](#top)
+<hr>
+
+## Loggin onto the Comet Portal: <a name="portal"></a>
 XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to your prior to the Preparation Day, Wednesday, July 22nd. Once you have received the email, please go to https://portal.comet.sdsc.edu, to confirm your login. 
 
-##  Github Account: 
+[Back to Top](#top)
+<hr>
+
+##  Github Account: <a name="github"></a>
 * If you do not already have a GitHub account, please create one. 
 See: [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
 
-## Software Requirements:
+[Back to Top](#top)
+<hr>
+
+## Software Requirements: <a name="software"></a>
 The document below contains a list of software being used at the institute and installation instructions:
 * [Software_Requirements](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md)
 
+[Back to Top](#top)
+<hr>
 
-### Other Skills
+### Other Skills <a name="other-skills"></a>
 See the [Basic HPC Skills repo](https://github.com/sdsc-hpc-training-org/basic_skills)
 https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/basic_linux_skills
 
@@ -57,6 +83,9 @@ https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/basic_linux_sk
 * [Interactive Computing](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/interactive_computing)
 * [How to Run Notebooks on Comet](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/how_to_run_notebooks_on_comet)
 * [Using GitHub](https://github.com/sdsc-hpc-training-org/basic_skills/tree/master/using_github)
+
+[Back to Top](#top)
+<hr>
 
 
 
