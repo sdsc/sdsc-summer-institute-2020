@@ -11,7 +11,8 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 * [Comet User Guide](#comet-guide)
 * [Computer Requirements](#computer-req)
 * [Account Requirements](#accounts)
-* [Logging onto the Comet Portal](#portal)
+  * [Logging onto Comet](#logon-comet)
+  * [Logging onto the Comet Portal](#logon-portal)
 * [Github Account](#github)
 * [Software Requirements](#software)
 * [Other Skills](#other-skills)
@@ -49,13 +50,16 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 <hr>
 
 ##  Account Requirements: <a name="accounts"></a>
+* XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to your prior to the Preparation Day, Wednesday, July 22nd.
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
 
 [Back to Top](#top)
 <hr>
 
-## Loggin onto the Comet Portal: <a name="portal"></a>
-XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to your prior to the Preparation Day, Wednesday, July 22nd. Once you have received the email, please go to https://portal.comet.sdsc.edu, to confirm your login. 
+### Logging onto Comet: <a name="logon-comet"></a>
+
+### Logging onto the Comet Portal: <a name="logon-portal"></a>
+ Once you have received your comet account information, please go to https://portal.comet.sdsc.edu, to confirm your login. 
 
 [Back to Top](#top)
 <hr>
