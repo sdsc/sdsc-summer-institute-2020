@@ -11,7 +11,7 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 * [Comet User Guide](#comet-guide)
 * [Computer Requirements](#computer-req)
 * [Account Requirements](#accounts)
-  * [Logging onto Comet](#logon-comet)
+  * [Logging onto Comet training account](#logon-comet)
   * [Logging onto the Comet Portal](#logon-portal)
 * [Github Account](#github)
 * [Software Requirements](#software)
