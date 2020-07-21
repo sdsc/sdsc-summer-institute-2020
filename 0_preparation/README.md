@@ -26,7 +26,7 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
   - GitHub (Mary)
 * Accounts
   - User environment (Mahi, Marty, Nicole)
-  - Logging onto Comet. (Mary, Mahi, Marty, Nicole, Scott)
+  - Logging onto Comet (Mary, Mahi, Marty, Nicole, Scott)
 * Software Requirements Overview (Mahi or Marty?)
   - Gitter (Cindy?)
   - Launch R
@@ -49,8 +49,8 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 <hr>
 
 ##  Account Requirements: <a name="accounts"></a>
-* XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to you prior to the Preparation Day, Wednesday, July 22nd.
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
+* XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to you prior to the event day, Monday, August 3.
 
 [Back to Top](#top)
 <hr>
