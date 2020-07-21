@@ -18,7 +18,7 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 * [Other Skills](#other-skills)
 
 
-## Prep Day Schedule (proposed): <a name="prep-day"></a>
+## Prep Day Schedule (7/22/2020, 9-11 am): <a name="prep-day"></a>
 
 * Welcome (Susan)
 * Tech Checks:
@@ -27,7 +27,6 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 * Accounts
   - User environment (Mahi, Marty, Nicole)
   - Logging onto Comet. (Mary, Mahi, Marty, Nicole, Scott)
-  - Logging onto Comet Portal (Mary, Marty, Subha, Scott)
 * Software Requirements Overview (Mahi or Marty?)
   - Gitter (Cindy?)
   - Launch R
