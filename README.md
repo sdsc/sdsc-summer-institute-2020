@@ -7,7 +7,7 @@ This repository hosts all material and slides of the presentations at the Summer
 
 * [Agenda](https://si20.sdsc.edu/agenda/)
 * Chat room <https://gitter.im/sdsc-summer-institute-2020/community> (login with your Github account)
-** Main Session Chat Room <https://gitter.im/sdsc-summer-institute-2020/Main_Room_Sessions> 
+* Main Session Chat Room <https://gitter.im/sdsc-summer-institute-2020/Main_Room_Sessions> 
 * See also [last year's material](https://github.com/sdsc/sdsc-summer-institute-2019)
 
 ## License
