@@ -52,12 +52,12 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 [Back to Top](#top)
 <hr>
 
-### Logging onto Comet: <a name="logon-comet"></a>
+### Logging onto Comet training account: <a name="logon-comet"></a>
 * You will be given an account on the SDSC Comet computer. Information on the account will be sent to you via email. Please complete the process of activating your account before the institute begins.
 
 ### Logging onto the Comet Portal: <a name="logon-portal"></a>
 * XSEDE training accounts to access the Comet portal have already been created for you. Please do not create one on your own account. An email will be sent to you prior to the event day, Monday, August 3.
- Once you have received your comet account information, please go to https://portal.comet.sdsc.edu, to confirm your login. 
+* Once you have received your comet account information, please go to https://portal.comet.sdsc.edu, to confirm your login. 
 
 [Back to Top](#top)
 <hr>
