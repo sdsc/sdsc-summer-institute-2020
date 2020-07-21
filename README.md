@@ -5,10 +5,12 @@
 
 This repository hosts all material and slides of the presentations at the Summer Institute
 
-* [Agenda](https://si20.sdsc.edu/agenda/)
-* Chat room <https://gitter.im/sdsc-summer-institute-2020/community> (login with your Github account)
+1 [Agenda](https://si20.sdsc.edu/agenda/)
+2 Gitter:  Please Join Each Session (login with your Github account)
+* Community:<ttps://gitter.im/sdsc-summer-institute-2020/community> 
 * Main Session Chat Room <https://gitter.im/sdsc-summer-institute-2020/Main_Room_Sessions> 
-* See also [last year's material](https://github.com/sdsc/sdsc-summer-institute-2019)
+* Breakout Room: <ttps://gitter.im/sdsc-summer-institute-2020/Breakout_Room_Sessions>
+3 See also [last year's material](https://github.com/sdsc/sdsc-summer-institute-2019)
 
 ## License
 
