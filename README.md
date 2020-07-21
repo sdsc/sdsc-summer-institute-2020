@@ -10,6 +10,8 @@ This repository hosts all material and slides of the presentations at the Summer
   * Community: <https://gitter.im/sdsc-summer-institute-2020/community> 
   * Main Session Chat Room <https://gitter.im/sdsc-summer-institute-2020/Main_Room_Sessions> 
   * Breakout Room: <https://gitter.im/sdsc-summer-institute-2020/Breakout_Room_Sessions>
+  * General Logistics: <https://gitter.im/sdsc-summer-institute-2020/General-Logistics>
+  * Help Desk: <https://gitter.im/sdsc-summer-institute-2020/Help-Desk>
 3. See also [last year's material](https://github.com/sdsc/sdsc-summer-institute-2019)
 
 ## License
