@@ -28,7 +28,8 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 * Accounts
   - User environment (Mahi, Marty, Nicole)
   - Logging onto Comet (Mary, Mahi, Marty, Nicole, Scott)
-* Software Requirements Overview (Mahi or Marty?)
+  - Interactive Compute Nodes
+* (Software Requirements Overview)[https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/software_requirements.md]
   - Launch R
   - Launch notebooks (Mary)
 
