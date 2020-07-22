@@ -23,28 +23,6 @@ See this quick-start guide: https://github.com/sdsc/sdsc-summer-institute-2020/t
 [Back to Top](#top)
 <hr>
 
-### Preparation: Install VirtualBox for *An Introduction to Singularity*: <a name="singularity"></a>
-
-If you plan to attend the introductory training session on [Singularity](https://singularity.lbl.gov/)
-containers, we will be building some example containers. Unfortuntely, there is
-not a stable version of Singularity for Mac OS X or Windows operating systems at
-this time. It is a purely Linux-based tool. As such, if you will be
-working on a Mac or Windows laptop during this session, your will need
-to download and install [VirtualBox](https://www.virtualbox.org/) on
-your laptop. This will allow you to run a Linux-based virtual machine on
-your Mac or Windows system.
-
-After installation and prior to attending the Summer Institute, we also
-recommend the you attempt to work through the first steps to creating
-and running your first (Linux) virtual machine as outlined in the
-[VirtualBox User Manual](https://www.virtualbox.org/manual/ch01.html).
-
-We recommend you create your Linux virtual machine using either the
-[Ubuntu 16.04 LTS](http://releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso) or [CentOS 7](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso) operating system distributions.
-
-[Back to Top](#top)
-<hr>
-
 ### Preparation: Using Jupyter Notebooks <a name="notebooks"></a>
 
 Some sessions and tutorials will be using *Jupyter Notebooks*. Running Juypter notebooks relies on you handling your own python package installation. It was designed with *Anaconda* in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using *Miniconda*, which is a free minimal installer for *conda* (an open source package management system and environment management system that runs on Windows, macOS and Linux). *conda* is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
