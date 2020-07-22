@@ -6,7 +6,6 @@ While many of the hands-on activities will be run on Comet, some sessions requir
 
  * [Preparation: Using Gitter](#gitter)
  * [Preparation: Using GitHub](#github)
- * [Plenary session: An Introduction to Singularity](#singularity)
  * [Preparation: Using Jupyter Notebooks](#notebooks)
  * [Parallel sessions: Machine Learning Overview](#mach-learn)
  * [Parallel session: Scientific visualization with Visit ](#visit)
