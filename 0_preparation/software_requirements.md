@@ -49,7 +49,7 @@ We recommend you create your Linux virtual machine using either the
 
 Some sessions and tutorials will be using *Jupyter Notebooks*. Running Juypter notebooks relies on you handling your own python package installation. It was designed with *Anaconda* in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using *Miniconda*, which is a free minimal installer for *conda* (an open source package management system and environment management system that runs on Windows, macOS and Linux). *conda* is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
 
-For installation and usage instructions, please see the [SDSC Notebooks 101 Tutorial](https://comet-notebooks-101.readthedocs.io/en/latest/index.html)
+For installation and usage instructions, please see the [SDSC Notebooks 101 Tutorial](https://comet-notebooks-101.readthedocs.io/en/comet/)
 
 To learn more about Notebooks, see the [Jupyter/IPython Notebook Quick Start Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
 
