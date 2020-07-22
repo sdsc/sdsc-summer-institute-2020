@@ -23,14 +23,14 @@ The Summer Institute is a combination of in-depth lectures and hands-on learning
 * Welcome (Susan)
 * Tech Checks:
   - Zoom. (Cindy)
-  - GitHub (Mary)
+  - Gitter (Cindy)
+  - GitHub (Marty)
 * Accounts
   - User environment (Mahi, Marty, Nicole)
   - Logging onto Comet (Mary, Mahi, Marty, Nicole, Scott)
 * Software Requirements Overview (Mahi or Marty?)
-  - Gitter (Cindy?)
   - Launch R
-  - Launch notebooks? (Mary)
+  - Launch notebooks (Mary)
 
 Note: if you have any difficulties getting set up, please contact Institute staff at consult@sdsc.edu.
 
