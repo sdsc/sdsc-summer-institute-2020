@@ -1,5 +1,5 @@
 # Preparing for the Summer Institute: Software Requirements
-Some sessions require that customized software be installed on **your laptop**. Please perform the following software installations and file downloads prior to the event. Most sessions will . Note: several of the preparation activities will provide information and guidance on how to install the required software components.
+Some sessions require that customized software be installed on **your laptop**. Please perform the following software installations and file downloads prior to the event. <br/>Note: several of the preparation activities will provide information and guidance on how to install the required software components.
 
 ## Contents <a name="top"></a>
 
