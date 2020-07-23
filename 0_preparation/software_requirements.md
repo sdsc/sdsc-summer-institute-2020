@@ -1,6 +1,6 @@
 # Preparing for the Summer Institute: Software Requirements
 
-While many of the hands-on activities will be run on Comet, some sessions require that customized software be installed on your laptop. Please perform the following software installations and file downloads prior to the event. Note: several of the preparation activities will provide information and guidance on how to install the required software components.
+While many of the hands-on activities will be run on Comet, some sessions require that customized software be installed on **your laptop**. Please perform the following software installations and file downloads prior to the event. Note: several of the preparation activities will provide information and guidance on how to install the required software components.
 
 ## Contents <a name="top"></a>
 
