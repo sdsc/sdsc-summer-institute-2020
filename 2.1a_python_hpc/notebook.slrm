@@ -3,14 +3,11 @@
 #SBATCH --output="jupyter-notebook.%j.%N.out"
 #SBATCH --partition=compute
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=24
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=24
 #SBATCH --export=ALL
 #SBATCH --time=04:00:00
 ## REMOVE RESERVATION AFTER SI
 ##SBATCH --reservation=SI2019DAY2
 
-
-conda init bash
-conda activate dask-tutorial
-
-~/miniconda/envs/dask-tutorial/bin/jupyter lab --no-browser --ip=$(hostname)
+/share/apps/compute/si2020/miniconda3/envs/python-hpc/bin/jupyter lab --no-browser --ip=$(hostname)
