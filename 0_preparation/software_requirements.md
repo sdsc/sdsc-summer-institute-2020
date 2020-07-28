@@ -12,6 +12,12 @@ Some sessions require that customized software be installed on **your laptop**. 
 
 ### Gitter Chat Room <a name="gitter"></a>
 Chat room https://gitter.im/sdsc-summer-institute-2020/community (login with your Github account)
+<br/>Gitter:  Please join each chat room session (login with your Github account). *If there are any issues, please contact events@sdsc.edu.* 
+  * SDSC SI20 Community: <https://gitter.im/sdsc-summer-institute-2020/community> 
+  * Main Session Room: <https://gitter.im/sdsc-summer-institute-2020/Main_Room_Session>
+  * Breakout Room: <https://gitter.im/sdsc-summer-institute-2020/Breakout_Room>
+  * General Logistics:  <https://gitter.im/sdsc-summer-institute-2020/General_Logistics>
+  * Help Desk: <https://gitter.im/sdsc-summer-institute-2020/HelpDesk>
 
 ### Using GitHub<a name="github"></a>
 
