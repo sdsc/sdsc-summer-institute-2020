@@ -5,7 +5,6 @@ Some sessions require that customized software be installed on **your laptop**. 
 
  * [Preparation: Using Gitter](#gitter)
  * [Preparation: Using GitHub](#github)
- * [Preparation: Using Jupyter Notebooks](#notebooks)
  * [Parallel sessions: Machine Learning Overview](#mach-learn)
  * [Parallel session: Scientific visualization with Visit ](#visit)
  * [Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects](#seedme)
@@ -17,17 +16,6 @@ Chat room https://gitter.im/sdsc-summer-institute-2020/community (login with you
 ### Using GitHub<a name="github"></a>
 
 See this quick-start guide: https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/using_github
-
-[Back to Top](#top)
-<hr>
-
-### Preparation: Using Jupyter Notebooks <a name="notebooks"></a>
-
-Some sessions and tutorials will be using *Jupyter Notebooks*. Running Juypter notebooks relies on you handling your own python package installation. It was designed with *Anaconda* in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using *Miniconda*, which is a free minimal installer for *conda* (an open source package management system and environment management system that runs on Windows, macOS and Linux). *conda* is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
-
-For installation and usage instructions, please see the [SDSC Notebooks 101 Tutorial](https://comet-notebooks-101.readthedocs.io/en/comet/)
-
-To learn more about Notebooks, see the [Jupyter/IPython Notebook Quick Start Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
 
 [Back to Top](#top)
 <hr>
