@@ -12,6 +12,7 @@ This repository hosts all material and slides of the presentations at the Summer
   * Breakout Room: <https://gitter.im/sdsc-summer-institute-2020/Breakout_Room>
   * General Logistics:  <https://gitter.im/sdsc-summer-institute-2020/General_Logistics>
   * Help Desk: <https://gitter.im/sdsc-summer-institute-2020/HelpDesk>
+  * SDSC Staff ONLY- <https://gitter.im/sdsc-summer-institute-2020/SDSC-Team-ONLY>
 3. See also [last year's material](https://github.com/sdsc/sdsc-summer-institute-2019)
 
 
