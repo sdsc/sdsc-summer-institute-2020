@@ -7,6 +7,6 @@ The class will be hands-on, we will go through a complex exercise together and a
 
 **The detailed walkthrough is available in the sol branch**
 
-https://github.com/zonca/conversion_tofix/blob/sol/README.md
+<https://github.com/zonca/conversion_tofix/blob/sol/README.md>
 
 Please open an issue in the repository if something is unclear or not working as expected.
