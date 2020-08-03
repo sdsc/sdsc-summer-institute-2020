@@ -20,14 +20,14 @@ The commands below can be cut & pasted into the terminal window, which is connec
 <hr>
 
 <a name="top">Contents:
+* [Comet Overview](#overview)
+    * [Comet Architecture](#network-arch)
+    * [Comet File Systems](#file-systems)
+
 * [Getting Started - Comet System Environment](#sys-env)
     * [Comet Accounts](#comet-accounts)
     * [Logging Onto Comet](#comet-logon)
     * [Obtaining Example Code](#example-code)
-
-* [Comet Overview](#overview)
-    * [Comet Architecture](#network-arch)
-    * [Comet File Systems](#file-systems)
 
 * [Modules: Managing User Environments](#modules)
     * [Common module commands](#module-commands)
@@ -41,10 +41,12 @@ The commands below can be cut & pasted into the terminal window, which is connec
     * [Using the PGI Compilers](#compilers-pgi)
     * [Using the GNU Compilers](#compilers-gnu)
 
-* [Running Parallel Jobs on Comet](#running-jobs)
+* [Running Jobs on Comet](#running-jobs)
     * [Command Line Jobs](#running-jobs-cmdline)
-    * [Batch Jobs using SLURM](#running-jobs-slurm)
-    * [Slurm Commands](#running-jobs-slurm-commands)
+    * [Using the SLURM Resource Manager](#running-jobs-slurm)
+      - [Slurm Commands](#running-jobs-slurm-commands)
+      * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
+      * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
 
 * [Hands-on Examples](#hands-on)
 * [Compiling and Running GPU/CUDA Jobs](#comp-and-run-cuda-jobs)
@@ -78,6 +80,48 @@ The commands below can be cut & pasted into the terminal window, which is connec
 
 [Back to Top](#top)
 <hr>
+
+## <a name="overview"></a>Comet Overview:
+
+### HPC for the "long tail of science:"
+* Designed and operated on the principle that the majority of computational research is performed at modest scale: large number jobs that run for less than 48 hours, but can be computationally intensvie and generate large amounts of data.
+* An NSF-funded system available through the eXtreme Science and Engineering Discovery Environment (XSEDE) program.
+* Also supports science gateways.
+
+<img src="images/comet-rack.png" alt="Comet Rack View" width="500px" />
+* ~67 TF supercomputer in a rack
+* 27 single-rack supercomputers
+
+
+<img src="images/comet-characteristics.png" alt="Comet System Characteristics" width="500px" />
+
+[Back to Top](#top)
+<hr>
+
+<a name="network-arch"></a><img src="images/comet-network-arch.png" alt="Comet Network Architecture" width="500px" />
+
+[Back to Top](#top)
+<hr>
+
+<a name="file-systems"></a><img src="images/comet-file-systems.png" alt="Comet File Systems" width="500px" />
+* Lustre filesystems – Good for scalable large block I/O
+    * Accessible from all compute and GPU nodes.
+    * /oasis/scratch/comet - 2.5PB, peak performance: 100GB/s. Good location for storing large scale scratch data during a job.
+    * /oasis/projects/nsf - 2.5PB, peak performance: 100 GB/s. Long term storage.
+    * *Not good for lots of small files or small block I/O.*
+
+* SSD filesystems
+    * /scratch local to each native compute node – 210GB on regular compute nodes, 285GB on GPU, large memory nodes, 1.4TB on selected compute nodes.
+    * SSD location is good for writing small files and temporary scratch files. Purged at the end of a job.
+
+* Home directories (/home/$USER)
+    * Source trees, binaries, and small input files.
+    * *Not good for large scale I/O.*
+
+
+[Back to Top](#top)
+<hr>
+
 
 ## <a name="sys-env"></a>Getting Started on Comet
 
@@ -185,48 +229,6 @@ Most examples will contain source code, along with a batch script example so you
 
 [Back to Top](#top)
 <hr>
-
-## <a name="overview"></a>Comet Overview:
-
-### HPC for the "long tail of science:"
-* Designed and operated on the principle that the majority of computational research is performed at modest scale: large number jobs that run for less than 48 hours, but can be computationally intensvie and generate large amounts of data.
-* An NSF-funded system available through the eXtreme Science and Engineering Discovery Environment (XSEDE) program.
-* Also supports science gateways.
-
-<img src="images/comet-rack.png" alt="Comet Rack View" width="500px" />
-* ~67 TF supercomputer in a rack
-* 27 single-rack supercomputers
-
-
-<img src="images/comet-characteristics.png" alt="Comet System Characteristics" width="500px" />
-
-[Back to Top](#top)
-<hr>
-
-<a name="network-arch"></a><img src="images/comet-network-arch.png" alt="Comet Network Architecture" width="500px" />
-
-[Back to Top](#top)
-<hr>
-
-<a name="file-systems"></a><img src="images/comet-file-systems.png" alt="Comet File Systems" width="500px" />
-* Lustre filesystems – Good for scalable large block I/O
-    * Accessible from all compute and GPU nodes.
-    * /oasis/scratch/comet - 2.5PB, peak performance: 100GB/s. Good location for storing large scale scratch data during a job.
-    * /oasis/projects/nsf - 2.5PB, peak performance: 100 GB/s. Long term storage.
-    * *Not good for lots of small files or small block I/O.*
-
-* SSD filesystems
-    * /scratch local to each native compute node – 210GB on regular compute nodes, 285GB on GPU, large memory nodes, 1.4TB on selected compute nodes.
-    * SSD location is good for writing small files and temporary scratch files. Purged at the end of a job.
-
-* Home directories (/home/$USER)
-    * Source trees, binaries, and small input files.
-    * *Not good for large scale I/O.*
-
-
-[Back to Top](#top)
-<hr>
-
 
 
 ## <a name="modules"></a>Modules: Customizing Your User Environment
@@ -469,12 +471,18 @@ For more information on the GNU compilers: man [gfortran | gcc | g++]
 
 [Back to Top](#top)
 <hr>
+[Running Jobs on Comet](#running-jobs)
+   * [Command Line Jobs](#running-jobs-cmdline)
+   * [Using the SLURM Resource Manager](#running-jobs-slurm)
+     - [Slurm Commands](#running-jobs-slurm-commands)
+     * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
+     * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
 
-## <a name="running-jobs"></a>Running Jobs on Comet
+## </a>Running Jobs on Comet <a name="running-jobs">
+Commands that you type into the terminal and run on the sytem are considered *jobs* and they consume resources. Comet manages computational work via the Simple Linux Utility for Resource Management (SLURM) batch environment. When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below). <em>Computationally intensive jobs should be run only on the compute nodes and not the login nodes</em>.
 
-### <a name="running-jobs-cmdline"></a>Command Line Jobs
-<em>Do not run on the login nodes - even for simple tests</em>.
-These nodes are meant for compilation, file editing, simple data analysis, and other tasks that use minimal compute resources. Even if you could run a simple test on the command line on the login node, full tests should not be run on the login node because the performance will be adversely impacted by all the other tasks and login activities of the other users who are logged onto the same node. For example, at the moment that this note was writeen,  a `gzip` process was consuming 98% of the CPU time:
+### Command Line Jobs <a name="running-jobs-cmdline"></a>
+The login nodes are meant for compilation, file editing, simple data analysis, and other tasks that use minimal compute resources. <em>Do not run parallel or large jobs on the login nodes - even for simple tests</em>. Even if you could run a simple test on the command line on the login node, full tests should not be run on the login node because the performance will be adversely impacted by all the other tasks and login activities of the other users who are logged onto the same node. For example, at the moment that this note was written,  a `gzip` process was consuming 98% of the CPU time:
 ```
 [mthomas@comet-ln3 OPENMP]$ top
 ...
@@ -482,14 +490,14 @@ These nodes are meant for compilation, file editing, simple data analysis, and o
 19937 XXXXX     20   0  4304  680  300 R 98.2  0.0   0:19.45 gzip
 ```
 
-### <a name="running-jobs-slurm"></a>Running Jobs using SLURM
+### </a>Running Jobs using SLURM <a name="running-jobs-slurm">
 
 * All jobs must be run via the Slurm scheduling infrastructure. There are two types of jobs:
     * Interactive Jobs: Use the `srun` command:
         ```
         srun --pty --nodes=1 --ntasks-per-node=24 -p debug -t 00:30:00 --wait 0 /bin/bash
         ```
-    * Batch Jobs: Submit batch scripts from the login nodes. You can set environment variables in the shell or in the batch script, including:
+    * Batch Jobs <a name="running-jobs-slurm-batch">: Submit batch scripts from the login nodes. You can set environment variables in the shell or in the batch script, including:
         * Partition (also called the qeueing system)
         * Time limit for a job (maximum of 48 hours; longer on request)
         * Number of nodes, tasks per node
@@ -499,6 +507,7 @@ These nodes are meant for compilation, file editing, simple data analysis, and o
 
 [Back to Top](#top)
 <hr>
+### Interactive Jobs: <a name="running-jobs-slurm-interactive">
 
 ### <a name="slurm-batch-jobs"></a>Batch Jobs using SLURM:
 Comet uses the Simple Linux Utility for Resource Management (SLURM) batch environment. For more details, see the section on Running job in the Comet User Guide:
