@@ -44,10 +44,11 @@ getgpu - one GPU for 3 hours (on days with GPU hands-on)
 getgpu1 - one GPU for 1 hour (on days with GPU hands-on)
 ```
 
-## Jupyter Notebooks for SI Sessions
+## Using Jupyter Technologies
 
-###  *Session 2.1a. Python for HPC*
-The command to run *secure* notebooks for this class is the *start_python_hpc_notebook* command (this will be in your path).
+### Jupyter Notebooks 
+(*Session 2.1a. Python for HPC*)
+The command to run *secure* Jupyter notebook servers for this class is the *start_python_hpc_notebook* command (this will be in your path).
 
 ```
 [train147@comet-ln2 ~]$ which start_python_hpc_notebook
@@ -60,7 +61,7 @@ The default time is set to 240 minutes in the compute partition. If you want you
 start_python_hpc_notebook 30
 ```
 
-### JupyterLab instances
+### JupyterLab servers
 
 ```
 start_python_hpc_jupyterlab
@@ -74,42 +75,10 @@ start_python_sparkr_cpu
 start_python_sparkr_gpu (gives you a K80 in gpu-shared)
 ```
 
-### GPU reservations
+## GPU reservations
 *getcpu:  "srun --pty --nodes=1 --ntasks-per-node=24 -p compute -t 3:00:00 --reservation=si2020resday1 --wait 0 /bin/bash"
 *getgpu:  "srun --pty --nodes=1 --ntasks-per-node=6 --gres=gpu:1 --partition gpu-shared -t 3:00:00  --reservation=si2020resday1 --wait 0 /bin/bash"
 *getcpu1:  "srun --pty --nodes=1 --ntasks-per-node=24 -p compute -t 1:00:00 --reservation=si2020resday1 --wait 0 /bin/bash"
 
 
-=================================
-The scripts are:
-
-Notebooks for Sessions
- For a notebook with Andrea's environment:
-
-start_python_hpc_notebook
-
-(this will be in your path)
-
-The default time is set to 240 minutes in the compute partition. If you want you can give some other value for the time, you can provide it as an argument:
-
-start_python_hpc_notebook 30
-
-
-### *jupyterlab instance*
-For session *2.1a. Python for HPC* 
-```
-start_python_hpc_jupyterlab
-```
-
-### R notebooks:
-For Session 3.1b. Machine Learning Overview,  Paul and Mai:
-```
-start_python_sparkr_cpu
-start_python_sparkr_gpu (gives you a K80 in gpu-shared)
-```
-
-### Interactive Nodes aliases:
-
-
-getcpu
 
