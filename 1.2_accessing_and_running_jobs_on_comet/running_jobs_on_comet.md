@@ -476,18 +476,13 @@ For more information on the GNU compilers: man [gfortran | gcc | g++]
 [Back to Top](#top)
 <hr>
 
-* [Running Jobs on Comet](#running-jobs)
-    * [The SLURM Resource Manager](#running-jobs-slurm)
-      * [Slurm Commands](#running-jobs-slurm-commands)
-      * [Slurm Partitions](#running-jobs-slurm-partitions)
-    * [Command Line Jobs](#running-jobs-cmdline)
-
 
 ## Running Jobs on Comet <a name="running-jobs"></a>
 Comet manages computational work via the Simple Linux Utility for Resource Management (SLURM) batch environment. Comet places limits on the number of jobs queued and running on a per group (allocation) and partition basis. Submitting a large number of jobs (especially very short ones) can impact the overall  scheduler response for all users. If you are anticipating submitting a lot of jobs,  contact the SDSC consulting staff before you submit them. We can work to check if there are bundling options that make your workflow more efficient and reduce the impact on the scheduler
 
 For more details, see the section on Running job in the Comet User Guide:
 http://www.sdsc.edu/support/user_guides/comet.html#running
+
 
 ### The Simple  Linux Utility for Resource Management  (SLURM) <a name="running-jobs-slurm"></a>
 
@@ -511,6 +506,9 @@ http://www.sdsc.edu/support/user_guides/comet.html#running
    * [Interactive Jobs](#running-jobs-slurm-interactive)
    * [Batch Jobs](#running-jobs-slurm-batch)
 
+[Back to Top](#top)
+<hr>
+
 ### Interactive Jobs: <a name="running-jobs-slurm-interactive">
 Interactive HPC systems allow *real-time* user inputs in order to facilitate code development, real-time data exploration, and visualizations. An interactive job (also referred as interactive session) will provide you with a shell on a compute node in which you can launch your jobs. On Comet, use the ```srun``` command:
 ```
@@ -519,7 +517,7 @@ srun --pty --nodes=1 --ntasks-per-node=24 -p debug -t 00:30:00 --wait 0 /bin/bas
 
 For more information, see the interactive computing tutorial [here](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/interactive_computing/README.md).
 
-### Batch Jobs using SLURM: <a name="slurm-batch-jobs"></a>
+### Batch Jobs using SLURM: <a name="running-jobs-slurm-batch"></a>
 When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below).
 
 Batch scripts are submitted from the login nodes. You can set environment variables in the shell or in the batch script, including:
@@ -547,6 +545,9 @@ Below is an example of a basic batch script:
 
     ibrun -v ../hello_mpi
 ```
+
+[Back to Top](#top)
+<hr>
 
 ### Slurm Partitions <a name="slurm-partitions"></a>
 Comet places limits on the number of jobs queued and running on a per group (allocation) and partition basis. Please note that submitting a large number of jobs (especially very short ones) can impact the overall  scheduler response for all users.
@@ -599,7 +600,6 @@ Commands that you type into the terminal and run on the sytem are considered *jo
 <hr>
 
 ## <a name="hands-on"></a>Hands-on Examples
-
 
 ## <a name="comp-and-run-cuda-jobs"></a>Compiling and Running GPU/CUDA Jobs
 <b>Sections:</b>
