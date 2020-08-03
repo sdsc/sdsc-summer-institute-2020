@@ -12,8 +12,8 @@ https://education.sdsc.edu/training/interactive/202004_intro_to_comet/index.php
 
 https://github.com/sdsc-hpc-training-org/comet-101/blob/master/running_jobs_on_comet.md
 
-## Link to GitHub Repo
-https://github.com/sdsc-hpc-training-org/webinars/tree/master/202004_comet_101
+## Link to Training Material GitHub Repo
+https://github.com/sdsc-hpc-training-org/comet-101
 
 ### Comet User Guide
 Please read the Comet user guide and familiarize yourself with the hardware, file systems, batch job submission, compilers and modules. The guide can be found here:
@@ -21,6 +21,6 @@ Please read the Comet user guide and familiarize yourself with the hardware, fil
 http://www.sdsc.edu/support/user_guides/comet.html
 
 ### Basic Skills
-You must be familiar with running basic Unix commands, connecting to Comet via SSH, and other basic skills. See:
+You should be familiar with running basic Unix commands, connecting to Comet via SSH, and other basic skills. See:
 https://github.com/sdsc-hpc-training/basic_skills
-
+for self-guided tutorials.
