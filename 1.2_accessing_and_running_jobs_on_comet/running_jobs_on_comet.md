@@ -42,11 +42,11 @@ The commands below can be cut & pasted into the terminal window, which is connec
     * [Using the GNU Compilers](#compilers-gnu)
 
 * [Running Jobs on Comet](#running-jobs)
+    * [The SLURM Resource Manager](#running-jobs-slurm)
+      * [Slurm Commands](#running-jobs-slurm-commands)
+    * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
+    * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
     * [Command Line Jobs](#running-jobs-cmdline)
-    * [Using the SLURM Resource Manager](#running-jobs-slurm)
-      - [Slurm Commands](#running-jobs-slurm-commands)
-      * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
-      * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
 
 * [Hands-on Examples](#hands-on)
 * [Compiling and Running GPU/CUDA Jobs](#comp-and-run-cuda-jobs)
@@ -89,8 +89,11 @@ The commands below can be cut & pasted into the terminal window, which is connec
 * Also supports science gateways.
 
 <img src="images/comet-rack.png" alt="Comet Rack View" width="500px" />
-* ~67 TF supercomputer in a rack
-* 27 single-rack supercomputers
+* 2.76 Pflop/s peak
+* 48,784 CPU cores
+* 288 NVIDIA GPUs
+* 247 TB total memory
+* 634 TB total flash memory
 
 
 <img src="images/comet-characteristics.png" alt="Comet System Characteristics" width="500px" />
@@ -471,47 +474,57 @@ For more information on the GNU compilers: man [gfortran | gcc | g++]
 
 [Back to Top](#top)
 <hr>
-[Running Jobs on Comet](#running-jobs)
-   * [Command Line Jobs](#running-jobs-cmdline)
-   * [Using the SLURM Resource Manager](#running-jobs-slurm)
-     - [Slurm Commands](#running-jobs-slurm-commands)
-     * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
-     * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
+
+* [Running Jobs on Comet](#running-jobs)
+    * [The SLURM Resource Manager](#running-jobs-slurm)
+      * [Slurm Commands](#running-jobs-slurm-commands)
+      * [Slurm Partitions](#running-jobs-slurm-partitions)
+    * [Command Line Jobs](#running-jobs-cmdline)
+
 
 ## </a>Running Jobs on Comet <a name="running-jobs">
-Commands that you type into the terminal and run on the sytem are considered *jobs* and they consume resources. Comet manages computational work via the Simple Linux Utility for Resource Management (SLURM) batch environment. When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below). <em>Computationally intensive jobs should be run only on the compute nodes and not the login nodes</em>.
+Comet manages computational work via the Simple Linux Utility for Resource Management (SLURM) batch environment. Comet places limits on the number of jobs queued and running on a per group (allocation) and partition basis. Submitting a large number of jobs (especially very short ones) can impact the overall  scheduler response for all users. If you are anticipating submitting a lot of jobs,  contact the SDSC consulting staff before you submit them. We can work to check if there are bundling options that make your workflow more efficient and reduce the impact on the scheduler
 
-### Command Line Jobs <a name="running-jobs-cmdline"></a>
-The login nodes are meant for compilation, file editing, simple data analysis, and other tasks that use minimal compute resources. <em>Do not run parallel or large jobs on the login nodes - even for simple tests</em>. Even if you could run a simple test on the command line on the login node, full tests should not be run on the login node because the performance will be adversely impacted by all the other tasks and login activities of the other users who are logged onto the same node. For example, at the moment that this note was written,  a `gzip` process was consuming 98% of the CPU time:
-```
-[mthomas@comet-ln3 OPENMP]$ top
-...
-  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                      
-19937 XXXXX     20   0  4304  680  300 R 98.2  0.0   0:19.45 gzip
-```
+For more details, see the section on Running job in the Comet User Guide:
+http://www.sdsc.edu/support/user_guides/comet.html#running
 
-### </a>Running Jobs using SLURM <a name="running-jobs-slurm">
+<img src="images/slurm.png" alt="Simple Linux Utility for Resource Management" width="500px" />
+Simple  Linux Utility for Resource Management  (SLURM)
+* “Glue” for parallel computer to schedule and execute jobs
+* Role: Allocate resources within a cluster
+  * Nodes (unique IP address)
+  * Interconnect/switches
+  * Generic resources (e.g. GPUs)
+  * Launch and otherwise manage jobs
+* Functionality:
+  * Prioritize queue(s) of jobs;
+  * decide when and where to start jobs;
+  * terminate job when done;
+  * Appropriate resources;
+  * Manage accounts for jobs
+
 
 * All jobs must be run via the Slurm scheduling infrastructure. There are two types of jobs:
-    * Interactive Jobs: Use the `srun` command:
-        ```
-        srun --pty --nodes=1 --ntasks-per-node=24 -p debug -t 00:30:00 --wait 0 /bin/bash
-        ```
-    * Batch Jobs <a name="running-jobs-slurm-batch">: Submit batch scripts from the login nodes. You can set environment variables in the shell or in the batch script, including:
-        * Partition (also called the qeueing system)
-        * Time limit for a job (maximum of 48 hours; longer on request)
-        * Number of nodes, tasks per node
-        * Memory requirements (if any)
-        * Job name, output file location
-        * Email info, configuration
+   * [Interactive Jobs](#running-jobs-slurm-interactive)
+   * [Batch Jobs](#running-jobs-slurm-batch)
 
-[Back to Top](#top)
-<hr>
 ### Interactive Jobs: <a name="running-jobs-slurm-interactive">
+Interactive HPC systems allow *real-time* user inputs in order to facilitate code development, real-time data exploration, and visualizations. An interactive job (also referred as interactive session) will provide you with a shell on a compute node in which you can launch your jobs. On Comet, use the ```srun``` command:
+```
+srun --pty --nodes=1 --ntasks-per-node=24 -p debug -t 00:30:00 --wait 0 /bin/bash
+```
 
 ### <a name="slurm-batch-jobs"></a>Batch Jobs using SLURM:
-Comet uses the Simple Linux Utility for Resource Management (SLURM) batch environment. For more details, see the section on Running job in the Comet User Guide:
-http://www.sdsc.edu/support/user_guides/comet.html#running
+When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below). Commands that you type into the terminal and run on the sytem are considered *jobs* and they consume resources.  <em>Computationally intensive jobs should be run only on the compute nodes and not the login nodes</em>.
+
+Batch scripts are submitted from the login nodes. You can set environment variables in the shell or in the batch script, including:
+    * Partition (also called the qeueing system)
+    * Time limit for a job (maximum of 48 hours; longer on request)
+    * Number of nodes, tasks per node
+    * Memory requirements (if any)
+    * Job name, output file location
+    * Email info, configuration
+
 
 ### Slurm Partitions
 
@@ -548,6 +561,14 @@ $ squeue -u $USER
 * To cancel a job, use the `scancel` along with the `JOBID`:
     *   $scancel <jobid>
 
+    ### Command Line Jobs <a name="running-jobs-cmdline"></a>
+    The login nodes are meant for compilation, file editing, simple data analysis, and other tasks that use minimal compute resources. <em>Do not run parallel or large jobs on the login nodes - even for simple tests</em>. Even if you could run a simple test on the command line on the login node, full tests should not be run on the login node because the performance will be adversely impacted by all the other tasks and login activities of the other users who are logged onto the same node. For example, at the moment that this note was written,  a `gzip` process was consuming 98% of the CPU time:
+    ```
+    [mthomas@comet-ln3 OPENMP]$ top
+    ...
+      PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                      
+    19937 XXXXX     20   0  4304  680  300 R 98.2  0.0   0:19.45 gzip
+    ```
 
 [Back to Top](#top)
 <hr>
