@@ -42,12 +42,12 @@ getcpu1  - one comput node for 1 hour
 ```
 getgpu - one GPU for 3 hours (on days with GPU hands-on)
 getgpu1 - one GPU for 1 hour (on days with GPU hands-on)
-
+```
 
 ## Jupyter Notebooks for SI Sessions
 
 ###  *Session 2.1a. Python for HPC*
-The command to run *secure* notebooks for this class is the ```start_python_hpc_notebook``` command (this will be in your path).
+The command to run *secure* notebooks for this class is the *start_python_hpc_notebook* command (this will be in your path).
 
 ```
 [train147@comet-ln2 ~]$ which start_python_hpc_notebook
