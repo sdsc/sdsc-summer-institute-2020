@@ -89,8 +89,7 @@ You must have a comet account in order to access the system.
 Details about how to access Comet under different circumstances are described in the Comet User Guide:
  http://www.sdsc.edu/support/user_guides/comet.html#access
 
- </a><img src="images/comet-logon.png" alt="Comet Logon" width="500px" />
-
+For instructions on how to use SSH, see [here](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/connecting-to-hpc-systems)
 ```
 [mthomas@gidget:~] ssh -Y comet.sdsc.edu
 Last login: Wed Apr 15 23:56:08 2020 from 76.176.117.51
