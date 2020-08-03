@@ -44,7 +44,7 @@ The commands below can be cut & pasted into the terminal window, which is connec
 * [Running Jobs on Comet](#running-jobs)
     * [The SLURM Resource Manager](#running-jobs-slurm)
       * [Common Slurm Commands](#running-jobs-slurm-commands)
-      * [Slurm Partitions](#slurm-partitions)]
+      * [Slurm Partitions](#running-jobs-slurm-partitions)
     * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
     * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
     * [Command Line Jobs](#running-jobs-cmdline)
