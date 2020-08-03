@@ -528,22 +528,31 @@ Batch scripts are submitted from the login nodes. You can set environment variab
 * Job name, output file location
 * Email info, configuration
 
-Below is an example of a basic batch script:
+Below is an example of a basic batch script, which shows key features including
+ naming the job/output file, selecting the SLURM queue partition, defining the
+ number of nodes and ocres, and the lenth of time that the job will need:
+
 ```
 [mthomas@comet-ln3 IBRUN]$ cat hellompi-slurm.sb
 #!/bin/bash
 #SBATCH --job-name="hellompi"
-    #SBATCH --output="hellompi.%j.%N.out"
-    #SBATCH --partition=compute
-    #SBATCH --nodes=2
-    #SBATCH --ntasks-per-node=24
-    #SBATCH --export=ALL
-    #SBATCH -t 00:30:00
+#SBATCH --output="hellompi.%j.%N.out"
+#SBATCH --partition=compute
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24
+#SBATCH --export=ALL
+#SBATCH -t 00:30:00
 
-    #This job runs with 2 nodes, 24 cores per node for a total of 48 cores.
-    #ibrun in verbose mode will give binding detail
+#Define user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
 
-    ibrun -v ../hello_mpi
+#This job runs with 2 nodes, 24 cores per node for a total of 48 cores.
+#ibrun in verbose mode will give binding detail
+
+ibrun -v ../hello_mpi
 ```
 
 [Back to Top](#top)
