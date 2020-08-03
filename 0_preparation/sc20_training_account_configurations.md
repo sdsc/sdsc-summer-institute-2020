@@ -4,11 +4,11 @@ Each member of the class, and instructors have a training account with a default
 
 ## NOTES/UPDATES:
 
-###[1] Do not replace the ```.bashrc``` with your own. 
+###. [1] Do not replace the ```.bashrc``` with your own. 
 
 SC20 aliases and paths are pre-installed (see below) and if you replace the files you will not be able to run the example software.
 
-###[2] SDSD staff have cleared out all the miniconda installs from each of your training directories. Please do not re-install conda. If you have trouble, go to the Gitter HelpDesk.
+### [2] SDSD staff have cleared out all the miniconda installs from each of your training directories. Please do not re-install conda. If you have trouble, go to the Gitter HelpDesk.
 
 <hr>
 
