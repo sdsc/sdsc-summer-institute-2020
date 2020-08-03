@@ -516,17 +516,34 @@ Interactive HPC systems allow *real-time* user inputs in order to facilitate cod
 srun --pty --nodes=1 --ntasks-per-node=24 -p debug -t 00:30:00 --wait 0 /bin/bash
 ```
 
-### <a name="slurm-batch-jobs"></a>Batch Jobs using SLURM:
+### Batch Jobs using SLURM: <a name="slurm-batch-jobs"></a>
 When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below). Commands that you type into the terminal and run on the sytem are considered *jobs* and they consume resources.  <em>Computationally intensive jobs should be run only on the compute nodes and not the login nodes</em>.
 
 Batch scripts are submitted from the login nodes. You can set environment variables in the shell or in the batch script, including:
-    * Partition (also called the qeueing system)
-    * Time limit for a job (maximum of 48 hours; longer on request)
-    * Number of nodes, tasks per node
-    * Memory requirements (if any)
-    * Job name, output file location
-    * Email info, configuration
+* Partition (also called the qeueing system)
+* Time limit for a job (maximum of 48 hours; longer on request)
+* Number of nodes, tasks per node
+* Memory requirements (if any)
+* Job name, output file location
+* Email info, configuration
 
+Below is an example of a basic batch script:
+```
+[mthomas@comet-ln3 IBRUN]$ cat hellompi-slurm.sb
+#!/bin/bash
+#SBATCH --job-name="hellompi"
+    #SBATCH --output="hellompi.%j.%N.out"
+    #SBATCH --partition=compute
+    #SBATCH --nodes=2
+    #SBATCH --ntasks-per-node=24
+    #SBATCH --export=ALL
+    #SBATCH -t 00:30:00
+
+    #This job runs with 2 nodes, 24 cores per node for a total of 48 cores.
+    #ibrun in verbose mode will give binding detail
+
+    ibrun -v ../hello_mpi
+```
 
 ### Slurm Partitions
 
