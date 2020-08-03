@@ -45,7 +45,7 @@ The commands below can be cut & pasted into the terminal window, which is connec
       * [Common Slurm Commands](#running-jobs-slurm-commands)
       * [Slurm Partitions](#running-jobs-slurm-partitions)
     * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
-    * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
+    * [Batch Jobs using SLURM](#running-jobs-slurm-batch-submit)
     * [Command Line Jobs](#running-jobs-cmdline)
 
 * [Hands-on Examples](#hands-on)
@@ -65,18 +65,21 @@ The commands below can be cut & pasted into the terminal window, which is connec
 
 * [Compiling and Running CPU Jobs](#comp-and-run-cpu-jobs)
     * [Hello World (MPI)](#hello-world-mpi)
+        * [Hello World (MPI): Source Code](#hello-world-mpi-source)
         * [Hello World (MPI): Compiling](#hello-world-mpi-compile)
+        * [Hello World (MPI): Interactive Jobs](#hello-world-mpi-interactive)
         * [Hello World (MPI): Batch Script Submission](#hello-world-mpi-batch-submit)
         * [Hello World (MPI): Batch Script Output](#hello-world-mpi-batch-output)
     * [Hello World (OpenMP)](#hello-world-omp)
+        * [Hello World (OpenMP): Source Code](#hello-world-omp-source)
         * [Hello World (OpenMP): Compiling](#hello-world-omp-compile)
-        * [Hello World (OpenMP): Interactive jobs](#hello-world-omp-interactive)
         * [Hello World (OpenMP): Batch Script Submission](#hello-world-omp-batch-submit)
         * [Hello World (OpenMP): Batch Script Output](#hello-world-omp-batch-output)
     * [Compiling and Running Hybrid (MPI + OpenMP) Jobs](#hybrid-mpi-omp)
+        * [Hybrid (MPI + OpenMP): Source Code](#hybrid-mpi-omp-source)
         * [Hybrid (MPI + OpenMP): Compiling](#hybrid-mpi-omp-compile)
         * [Hybrid (MPI + OpenMP): Batch Script Submission](#hybrid-mpi-omp-batch-submit)
-        * [Hybrid (MPI + OpenMP): Batch Script Output](#hybrid-mpi-omp-output)
+        * [Hybrid (MPI + OpenMP): Batch Script Output](#hybrid-mpi-omp-batch-output)
 
 [Back to Top](#top)
 <hr>
@@ -503,7 +506,7 @@ http://www.sdsc.edu/support/user_guides/comet.html#running
 
 * All jobs must be run via the Slurm scheduling infrastructure. There are two types of jobs:
    * [Interactive Jobs](#running-jobs-slurm-interactive)
-   * [Batch Jobs](#running-jobs-slurm-batch)
+   * [Batch Jobs](#running-jobs-slurm-batch-submit)
 
 [Back to Top](#top)
 <hr>
@@ -613,8 +616,13 @@ Commands that you type into the terminal and run on the sytem are considered *jo
 
 ## <a name="hands-on"></a>Hands-on Examples
 * [Compiling and Running GPU/CUDA Jobs](#comp-and-run-cuda-jobs)
+  * [GPU Hello World (GPU) ](#hello-world-gpu)
+  * [GPU Enumeration ](#enum-gpu)
+  * [CUDA Mat-Mult](#mat-mul-gpu)
 * [Compiling and Running CPU Jobs](#comp-and-run-cpu-jobs)
-* [Compiling and Running Hybrid (MPI + OpenMP) Jobs](#hybrid-mpi-omp)
+  * [Hello World (MPI)](#hello-world-mpi)
+  * [Hello World (OpenMPI)](#hello-world-omp)
+  * [Compiling and Running Hybrid (MPI + OpenMP) Jobs](#hybrid-mpi-omp)
 
 ## <a name="comp-and-run-cuda-jobs"></a>Compiling and Running GPU/CUDA Jobs
 <b>Sections:</b>
@@ -710,6 +718,11 @@ drwxr-xr-x 4 mthomas use300  11 Apr 16 01:57 ..
 #SBATCH --gres=gpu:2
 #SBATCH -t 01:00:00
 
+# Define the user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
 #Load the cuda module
 module load cuda
 
@@ -871,6 +884,11 @@ Script is asking for 1 GPU.
 #SBATCH --gres=gpu:1         # define type of GPU
 #SBATCH -t 00:05:00
 
+# Define the user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
 #Load the cuda module
 module load cuda
 
@@ -939,11 +957,16 @@ Max grid dimensions: (2147483647, 65535, 65535)
   8 #SBATCH --gres=gpu:2         # first available
   9 #SBATCH -t 00:05:00
  10
- 11 #Load the cuda module
- 12 module load cuda
- 13
- 14 #Run the job
- 15 ./gpu_enum
+ 11 # Define the user environment
+ 12 source /etc/profile.d/modules.sh
+ 13 module purge
+ 14 module load intel
+ 15 module load mvapich2_ib
+ 16 #Load the cuda module
+ 17 module load cuda
+ 18
+ 19 #Run the job
+ 20 ./gpu_enum
 ```
 
 The output will show information for two devices:
@@ -1068,6 +1091,11 @@ drwxr-xr-x 16 user user300     16 Aug  5 19:02 ..
 #SBATCH --gres=gpu:1
 #SBATCH -t 00:10:00
 
+# Define the user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
 #Load the cuda module
 module load cuda
 
@@ -1113,7 +1141,7 @@ vary when GPU Boost is enabled.
 <hr>
 
 
-## <a name="comp-and-run-cpu-jobs"></a> Compiling and Running CPU Jobs
+## Compiling and Running CPU Jobs: <a name="comp-and-run-cpu-jobs"></a>
 <b>Sections:</b>
 * [Hello World (MPI)](#hello-world-mpi)
 * [Hello World (OpenMP)](#hello-world-omp)
@@ -1122,11 +1150,14 @@ vary when GPU Boost is enabled.
 
 ### <a name="hello-world-mpi"></a>Hello World (MPI)
 <b>Subsections:</b>
-* [CPU Hello World: Compiling](#hello-world-mpi-compile)
-* [CPU Hello World: Batch Script Submission](#hello-world-mpi-batch-submit)
-* [CPU Hello World: Batch Job Output](#hello-world-mpi-batch-output)
+* [Hello World (MPI): Source Code](#hello-world-mpi-source)
+* [Hello World (MPI): Compiling](#hello-world-mpi-compile)
+* [Hello World (MPI): Interactive Jobs](#hello-world-mpi-interactive)
+* [Hello World (MPI): Batch Script Submission](#hello-world-mpi-batch-submit)
+* [Hello World (MPI): Batch Script Output](#hello-world-mpi-batch-output)
 
 
+#### CPU Hello World: Source code: <#hello-world-mpi-source>
 Change to the MPI examples directory (assuming you already copied the ):
 ```
 [mthomas@comet-ln3 comet101]$ cd MPI
@@ -1195,7 +1226,7 @@ Currently Loaded Modulefiles:
 [Back to Top](#top)
 <hr>
 
-#### <a name="hello-world-mpi-compile"></a>Hello World (MPI): Compiling
+#### Hello World (MPI): Compiling: <a name="hello-world-mpi-compile"></a>
 
 * Compile the MPI hello world code.
 * For this, we use the command `mpif90`, which is loaded into your environment when you loaded the intel module above.
@@ -1230,7 +1261,7 @@ drwxr-xr-x 2 mthomas use300      3 Apr 16 00:57 MPIRUN_RSH
 [Back to Top](#top)
 <hr>
 
-#### <a name="hello-world-mpi-interactive"></a>Hello World (MPI): Interactive Jobs
+#### Hello World (MPI): Interactive Jobs: <a name="hello-world-mpi-interactive"></a>
 
 * To run MPI (or other executables) from the command line, you need to use the "Interactive" nodes.
 * To launch the nodes (to get allocated a set of nodes), use the `srun` command. This example will request one node, all 24 cores, in the debug partition for 30 minutes:
@@ -1257,13 +1288,13 @@ comet-14-01.sdsc.edu
 [mthomas@comet-14-01 MPI]$
 ```
 
-When you done testing code, exit the Interactive session.
+When you are done testing code, exit the Interactive session.
 
 [Back to CPU Jobs](#comp-and-run-cpu-jobs) <br>
 [Back to Top](#top)
 <hr>
 
-#### <a name="hello-world-mpi-batch-submit"></a>Hello World (MPI): Batch Script Submission
+#### Hello World (MPI): Batch Script Submission:  <a name="hello-world-mpi-batch-submit"></a>
 To submit jobs to the Slurm queuing system, you need to create a slurm batch job script and
 submit it to the queuing system.
 
@@ -1279,6 +1310,12 @@ submit it to the queuing system.
 #SBATCH --ntasks-per-node=24
 #SBATCH --export=ALL
 #SBATCH -t 00:30:00
+
+# load the user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
 
 #This job runs with 2 nodes, 24 cores per node for a total of 48 cores.
 #ibrun in verbose mode will give binding detail
@@ -1300,7 +1337,7 @@ sbatch --res=SI2018DAY1 hellompi-slurm.sb
 [Back to Top](#top)
 <hr>
 
-#### <a name="hello-world-mpi-batch-output"></a>Hello World (MPI): Batch Script Output
+#### Hello World (MPI): Batch Script Output: <a name="hello-world-mpi-batch-output"></a>
 
 * Check job status using the `squeue` command.
 ```
@@ -1406,11 +1443,15 @@ IBRUN: Job ended with value 0
 [Back to Top](#top)
 <hr>
 
-### <a name="hello-world-omp"></a>Hello World (OpenMP)
+### Hello World (OpenMP): <a name="hello-world-omp"></a>
 <b>Subsections:</b>
+* [Hello World (OpenMP): Source Code](#hello-world-omp-source)
 * [Hello World (OpenMP): Compiling](#hello-world-omp-compile)
 * [Hello World (OpenMP): Batch Script Submission](#hello-world-omp-batch-submit)
-* [Hello World (OpenMP): Batch Job Output](#hello-world-omp-batch-output)
+* [Hello World (OpenMP): Batch Script Output](#hello-world-omp-batch-output)
+
+
+#### Hello World (OpenMP): Source Code <a name="hello-world-omp-source"></a>
 
 Change to the OPENMP examples directory:
 ```
@@ -1441,7 +1482,7 @@ drwxr-xr-x 16 username use300     16 Aug  5 19:02 ..
 [Back to Top](#top)
 <hr>
 
-#### <a name="hello-world-omp-compile"></a>Hello World (OpenMP): Compiling
+#### Hello World (OpenMP): Compiling:  <a name="hello-world-omp-compile"></a>
 
 Note that there is already a compiled version of the `hello_openmp.f90` code. You can save or delete this version.
 
@@ -1516,6 +1557,12 @@ The submit script is openmp-slurm.sb:
 #SBATCH --export=ALL
 #SBATCH -t 01:30:00
 
+# Define the user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
+
 #SET the number of openmp threads
 export OMP_NUM_THREADS=24
 
@@ -1536,7 +1583,7 @@ Submitted batch job 32661678
 [Back to Top](#top)
 <hr>
 
-#### <a name="hello-world-omp-batch-output"></a>Hello World (OpenMP): Batch Script Output
+#### Hello World (OpenMP): Batch Script Output:  <a name="hello-world-omp-batch-output"></a>
 
 * Once the job is finished:
 ```
@@ -1572,13 +1619,15 @@ Submitted batch job 32661678
 <hr>
 
 ### Hybrid (MPI + OpenMP) Jobs: <a name="hybrid-mpi-omp"></a>
-* Subsections:
-    * [Hybrid (MPI + OpenMP): Compiling](#hybrid-mpi-omp-compile)
-    * [Hybrid (MPI + OpenMP): Batch Script Submission](#hybrid-mpi-omp-batch-submit)
-    * [Hybrid (MPI + OpenMP): Batch Script Output](#hybrid-mpi-omp-output)
+<b>Subsections:</b>
+* [Hybrid (MPI + OpenMP): Source Code](#hybrid-mpi-omp-source)
+* [Hybrid (MPI + OpenMP): Compiling](#hybrid-mpi-omp-compile)
+* [Hybrid (MPI + OpenMP): Batch Script Submission](#hybrid-mpi-omp-batch-submit)
+* [Hybrid (MPI + OpenMP): Batch Script Output](#hybrid-mpi-omp-batch-output)
 
 
-Several HPC codes use a hybrid MPI, OpenMP approach.
+### Hybrid (MPI + OpenMP) Source Code: <a name="hybrid-mpi-omp-source"></a>
+#Several HPC codes use a hybrid MPI, OpenMP approach.
 * `ibrun` wrapper developed to handle such hybrid use cases. Automatically senses the MPI build (mvapich2, openmpi) and binds tasks correctly.
 * `ibrun -help` gives detailed usage info.
 * hello_hybrid.c is a sample code, and hello_hybrid.cmd shows “ibrun” usage.
@@ -1627,7 +1676,7 @@ int main(int argc, char *argv[]) {
 [Back to Top](#top)
 <hr>
 
-#### <a name="hybrid-mpi-omp-compile"></a>Hybrid (MPI + OpenMP): Compiling
+#### Hybrid (MPI + OpenMP): Compiling:  <a name="hybrid-mpi-omp-compile"></a>
 * To compile the hybrid MPI + OpenMPI code, we need to refer to the table of compilers listed above (and listed in the user guide).
 * We will use the command `mpicx -openmp`
 ```
@@ -1647,7 +1696,7 @@ drwxr-xr-x 16 username use300     16 Aug  5 19:02 ..
 <hr>
 
 
-#### Hybrid (MPI + OpenMP): Batch Script Submission:  <a name="hybrid-mpi-omp-submit"></a>
+#### Hybrid (MPI + OpenMP): Batch Script Submission:  <a name="hybrid-mpi-omp-batch-submit"></a>
 * To submit the hybrid code, we still use the `ibrun` command.
 * In this example, we set the number of threads explicitly.
 ```
@@ -1660,6 +1709,13 @@ drwxr-xr-x 16 username use300     16 Aug  5 19:02 ..
 #SBATCH --ntasks-per-node=24
 #SBATCH --export=ALL
 #SBATCH -t 01:30:00
+
+
+# Define the user environment
+source /etc/profile.d/modules.sh
+module purge
+module load intel
+module load mvapich2_ib
 
 #This job runs with 2 nodes, 24 cores per node for a total of 48 cores.
 # We use 8 MPI tasks and 6 OpenMP threads per MPI task
@@ -1682,7 +1738,7 @@ Submitted batch job 18347079
 <hr>
 
 
-#### Hybrid (MPI + OpenMP): Batch Script Output: <a name="hybrid-mpi-omp-output"></a>
+#### Hybrid (MPI + OpenMP): Batch Script Output: <a name="hybrid-mpi-omp-batch-output"></a>
 
 ```
 [mthomas@comet-ln2 HYBRID]$ ll
