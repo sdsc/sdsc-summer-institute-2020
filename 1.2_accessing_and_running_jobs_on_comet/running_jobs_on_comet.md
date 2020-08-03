@@ -92,11 +92,12 @@ Details about how to access Comet under different circumstances are described in
 For instructions on how to use SSH, see [here](https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/connecting-to-hpc-systems)
 ```
 [mthomas@gidget:~] ssh -Y comet.sdsc.edu
-Last login: Wed Apr 15 23:56:08 2020 from 76.176.117.51
+Password:
+Last login: Fri Jul 31 14:20:40 2020 from 76.176.117.51
 Rocks 7.0 (Manzanita)
-Profile built 13:03 03-Dec-2019
+Profile built 12:32 03-Dec-2019
 
-Kickstarted 14:18 03-Dec-2019
+Kickstarted 13:47 03-Dec-2019
 
                       WELCOME TO
       __________________  __  _______________
@@ -104,7 +105,6 @@ Kickstarted 14:18 03-Dec-2019
           --/ /   / / / / /|_/ / __/   / /
            / /___/ /_/ / /  / / /___  / /
            \____/\____/_/  /_/_____/ /_/
-
 ###############################################################################
 NOTICE:
 The Comet login nodes are not to be used for running processing tasks.
@@ -116,6 +116,8 @@ Any tasks found running on the login nodes in violation of this policy
  may be terminated immediately and the responsible user locked out of
 the system until they contact user services.
 ###############################################################################
+(base) [mthomas@comet-ln2:~]
+
 ```
 
 [Back to Top](#top)
@@ -141,15 +143,19 @@ drwxr-xr-x   2 user use300     2 Jul 17 20:20 comet-examples
 /home/user/comet-examples
 [comet-ln2 comet-examples]$
 ```
-* Copy the `comet101 directory` from the /examples directory to your 'comet-examples' directory, which is located in your home (`/home/username`) directory. Note: you should have completed the creation of this directory as part of the *Getting Started* and *Basic Skills* preparation work:
-https://github.com/sdsc/sdsc-summer-institute-2018/tree/master/0_preparation
+* Copy the `comet101 directory` from the /examples directory to your 'comet-examples' directory, which is located in your home (`/home/username`) directory. Note: you should have created directories as part of the *Getting Started* and *Basic Skills* preparation work:
+https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation
 ```
-[mthomas@comet-ln3 ~]$ ls -al /share/apps/examples/comet101/
-[mthomas@comet-ln3:~/comet101] ll /share/apps/examples/hpc-training/comet101/
+[mthomas@comet-ln3 ~]$ ls -al /share/apps/examples/hpc-training/comet-examples/
 total 20
-drwxr-sr-x 5 mthomas  use300 4096 Apr 16 03:31 .
+(base) [mthomas@comet-ln2:~/comet101] ll /share/apps/examples/hpc-training/comet101/
+total 32
+drwxr-sr-x 8 mthomas  use300 4096 Apr 16 10:39 .
 drwxrwsr-x 4 mahidhar use300 4096 Apr 15 23:37 ..
 drwxr-sr-x 5 mthomas  use300 4096 Apr 16 03:30 CUDA
+drwxr-sr-x 2 mthomas  use300 4096 Apr 16 10:39 HYBRID
+drwxr-sr-x 2 mthomas  use300 4096 Apr 16 10:39 jupyter_notebooks
+drwxr-sr-x 2 mthomas  use300 4096 Apr 16 16:46 MKL
 drwxr-sr-x 4 mthomas  use300 4096 Apr 16 03:30 MPI
 drwxr-sr-x 2 mthomas  use300 4096 Apr 16 03:31 OPENMP
 ```
@@ -162,15 +168,17 @@ total 105
 drwxr-xr-x  5 username use300   6 Aug  5 19:02 .
 drwxr-x--- 10 username use300  27 Aug  5 17:59 ..
 drwxr-xr-x 16 username use300  16 Aug  5 19:02 comet101
-[mthomas@comet-ln3 ~]$ cd comet-examples/comet101/
-[mthomas@comet-ln3 comet101]$ ls -al
+[mthomas@comet-ln3 comet-examples]$ ls -al
 total 132
-drwxr-xr-x  6 mthomas use300  6 Apr 16 01:47 .
-drwxr-x--- 52 mthomas use300 79 Apr 16 02:27 ..
-drwxr-xr-x  5 mthomas use300  5 Apr 16 02:37 CUDA
-drwxr-xr-x  2 mthomas use300  3 Apr 15 20:16 jupyter_notebooks
-drwxr-xr-x  4 mthomas use300  7 Apr 16 01:11 MPI
-drwxr-xr-x  2 mthomas use300  9 Apr 16 00:49 OPENMP
+total 170
+drwxr-xr-x  8 mthomas use300  8 Aug  3 01:19 .
+drwxr-x--- 64 mthomas use300 98 Aug  3 01:19 ..
+drwxr-xr-x  5 mthomas use300  5 Aug  3 01:19 CUDA
+drwxr-xr-x  2 mthomas use300  6 Aug  3 01:19 HYBRID
+drwxr-xr-x  2 mthomas use300  3 Aug  3 01:19 jupyter_notebooks
+drwxr-xr-x  2 mthomas use300  6 Aug  3 01:19 MKL
+drwxr-xr-x  4 mthomas use300  9 Aug  3 01:19 MPI
+drwxr-xr-x  2 mthomas use300  9 Aug  3 01:19 OPENMP
 ```
 Most examples will contain source code, along with a batch script example so you can run the example, and compilation examples (e.g. see the MKL example).
 
@@ -352,7 +360,7 @@ http://www.sdsc.edu/support/user_guides/comet.html#compiling
 
 Comet compute nodes support several parallel programming models:
 * __MPI__: Default: Intel
-   * Default Intel Compiler: intel/2018.1.163; Other versions available. 
+   * Default Intel Compiler: intel/2018.1.163; Other versions available.
    * Other options: openmpi_ib/1.8.4 (and 1.10.2), Intel MPI, mvapich2_ib/2.1
    * mvapich2_gdr: GPU direct enabled version
 * __OpenMP__: All compilers (GNU, Intel, PGI) have OpenMP flags.
