@@ -32,7 +32,6 @@ The commands below can be cut & pasted into the terminal window, which is connec
 * [Modules: Managing User Environments](#modules)
     * [Common module commands](#module-commands)
     * [Load and Check Modules and Environment](#load-and-check-module-env)
-    * [Using Scripts to Load Module Environments](#module-load-scripts)
     * [Module Error: command not found](#module-error)
 
 * [Compiling & Linking](#compilers)
@@ -74,7 +73,7 @@ The commands below can be cut & pasted into the terminal window, which is connec
         * [Hello World (OpenMP): Interactive jobs](#hello-world-omp-interactive)
         * [Hello World (OpenMP): Batch Script Submission](#hello-world-omp-batch-submit)
         * [Hello World (OpenMP): Batch Script Output](#hello-world-omp-batch-output)
-    * [Running Hybrid (MPI + OpenMP) Jobs](#hybrid-mpi-omp)
+    * [Compiling and Running Hybrid (MPI + OpenMP) Jobs](#hybrid-mpi-omp)
         * [Hybrid (MPI + OpenMP): Compiling](#hybrid-mpi-omp-compile)
         * [Hybrid (MPI + OpenMP): Batch Script Submission](#hybrid-mpi-omp-batch-submit)
         * [Hybrid (MPI + OpenMP): Batch Script Output](#hybrid-mpi-omp-output)
@@ -530,7 +529,7 @@ Batch scripts are submitted from the login nodes. You can set environment variab
 
 Below is an example of a basic batch script, which shows key features including
  naming the job/output file, selecting the SLURM queue partition, defining the
- number of nodes and ocres, and the lenth of time that the job will need:
+ number of nodes and ocres, and the length of time that the job will need:
 
 ```
 [mthomas@comet-ln3 IBRUN]$ cat hellompi-slurm.sb
@@ -554,6 +553,10 @@ module load mvapich2_ib
 
 ibrun -v ../hello_mpi
 ```
+
+Note that we have included configuring the user environment by purging and
+then loading the necessary modules. While not required, it is a good habit
+to develop when building batch scripts.
 
 [Back to Top](#top)
 <hr>
@@ -609,6 +612,9 @@ Commands that you type into the terminal and run on the sytem are considered *jo
 <hr>
 
 ## <a name="hands-on"></a>Hands-on Examples
+* [Compiling and Running GPU/CUDA Jobs](#comp-and-run-cuda-jobs)
+* [Compiling and Running CPU Jobs](#comp-and-run-cpu-jobs)
+* [Compiling and Running Hybrid (MPI + OpenMP) Jobs](#hybrid-mpi-omp)
 
 ## <a name="comp-and-run-cuda-jobs"></a>Compiling and Running GPU/CUDA Jobs
 <b>Sections:</b>
@@ -1565,7 +1571,13 @@ Submitted batch job 32661678
 [Back to Top](#top)
 <hr>
 
-### <a name="hybrid-mpi-omp"></a>Hybrid (MPI + OpenMP) Jobs
+### Hybrid (MPI + OpenMP) Jobs: <a name="hybrid-mpi-omp"></a>
+* Subsections:
+    * [Hybrid (MPI + OpenMP): Compiling](#hybrid-mpi-omp-compile)
+    * [Hybrid (MPI + OpenMP): Batch Script Submission](#hybrid-mpi-omp-batch-submit)
+    * [Hybrid (MPI + OpenMP): Batch Script Output](#hybrid-mpi-omp-output)
+
+
 Several HPC codes use a hybrid MPI, OpenMP approach.
 * `ibrun` wrapper developed to handle such hybrid use cases. Automatically senses the MPI build (mvapich2, openmpi) and binds tasks correctly.
 * `ibrun -help` gives detailed usage info.
@@ -1635,7 +1647,7 @@ drwxr-xr-x 16 username use300     16 Aug  5 19:02 ..
 <hr>
 
 
-#### <a name="hybrid-mpi-omp-submit"></a>Hybrid (MPI + OpenMP): Batch Script Submission
+#### Hybrid (MPI + OpenMP): Batch Script Submission:  <a name="hybrid-mpi-omp-submit"></a>
 * To submit the hybrid code, we still use the `ibrun` command.
 * In this example, we set the number of threads explicitly.
 ```
@@ -1670,7 +1682,8 @@ Submitted batch job 18347079
 <hr>
 
 
-#### <a name="hybrid-mpi-omp-output"></a>Hybrid (MPI + OpenMP): Batch Script Output
+#### Hybrid (MPI + OpenMP): Batch Script Output: <a name="hybrid-mpi-omp-output"></a>
+
 ```
 [mthomas@comet-ln2 HYBRID]$ ll
 total 122
