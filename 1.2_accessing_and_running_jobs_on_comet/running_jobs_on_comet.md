@@ -488,7 +488,7 @@ Comet manages computational work via the Simple Linux Utility for Resource Manag
 For more details, see the section on Running job in the Comet User Guide:
 http://www.sdsc.edu/support/user_guides/comet.html#running
 
-### Simple  Linux Utility for Resource Management  (SLURM)
+### The Simple  Linux Utility for Resource Management  (SLURM) <a name="running-jobs-slurm"></a>
 
 <img src="images/slurm.png" alt="Simple Linux Utility for Resource Management" width="500px" />
 
@@ -498,13 +498,13 @@ http://www.sdsc.edu/support/user_guides/comet.html#running
   * Interconnect/switches
   * Generic resources (e.g. GPUs)
   * Launch and otherwise manage jobs
+
 * Functionality:
   * Prioritize queue(s) of jobs;
   * decide when and where to start jobs;
   * terminate job when done;
   * Appropriate resources;
   * Manage accounts for jobs
-
 
 * All jobs must be run via the Slurm scheduling infrastructure. There are two types of jobs:
    * [Interactive Jobs](#running-jobs-slurm-interactive)
@@ -563,7 +563,7 @@ $ squeue -u $USER
 * To cancel a job, use the `scancel` along with the `JOBID`:
     *   $scancel <jobid>
 
-    ### Command Line Jobs <a name="running-jobs-cmdline"></a>
+### Command Line Jobs <a name="running-jobs-cmdline"></a>
     The login nodes are meant for compilation, file editing, simple data analysis, and other tasks that use minimal compute resources. <em>Do not run parallel or large jobs on the login nodes - even for simple tests</em>. Even if you could run a simple test on the command line on the login node, full tests should not be run on the login node because the performance will be adversely impacted by all the other tasks and login activities of the other users who are logged onto the same node. For example, at the moment that this note was written,  a `gzip` process was consuming 98% of the CPU time:
     ```
     [mthomas@comet-ln3 OPENMP]$ top
