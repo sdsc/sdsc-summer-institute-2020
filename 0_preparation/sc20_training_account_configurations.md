@@ -4,7 +4,7 @@ Each member of the class, and instructors have a training account with a default
 
 ## NOTES/UPDATES:
 
-###. [1] Do not replace the ```.bashrc``` with your own. 
+### [1] Do not replace the ```.bashrc``` with your own. 
 
 SC20 aliases and paths are pre-installed (see below) and if you replace the files you will not be able to run the example software.
 
