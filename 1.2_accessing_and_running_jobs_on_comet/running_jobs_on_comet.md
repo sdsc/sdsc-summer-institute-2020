@@ -43,9 +43,10 @@ The commands below can be cut & pasted into the terminal window, which is connec
 
 * [Running Jobs on Comet](#running-jobs)
     * [The SLURM Resource Manager](#running-jobs-slurm)
-      * [Slurm Commands](#running-jobs-slurm-commands)
-    * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
+      * [Common Slurm Commands](#running-jobs-slurm-commands)
+      * [Slurm Partitions](#slurm-partitions)]
     * [Interactive Jobs using SLURM](#running-jobs-slurm-interactive)
+    * [Batch Jobs using SLURM](#running-jobs-slurm-batch)
     * [Command Line Jobs](#running-jobs-cmdline)
 
 * [Hands-on Examples](#hands-on)
@@ -516,8 +517,10 @@ Interactive HPC systems allow *real-time* user inputs in order to facilitate cod
 srun --pty --nodes=1 --ntasks-per-node=24 -p debug -t 00:30:00 --wait 0 /bin/bash
 ```
 
+For more information, see the interactive computing tutorial [here](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/0_preparation/interactive_computing/README.md).
+
 ### Batch Jobs using SLURM: <a name="slurm-batch-jobs"></a>
-When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below). Commands that you type into the terminal and run on the sytem are considered *jobs* and they consume resources.  <em>Computationally intensive jobs should be run only on the compute nodes and not the login nodes</em>.
+When you run in the batch mode, you submit jobs to be run on the compute nodes using the ```sbatch``` command (described below).
 
 Batch scripts are submitted from the login nodes. You can set environment variables in the shell or in the batch script, including:
 * Partition (also called the qeueing system)
@@ -545,7 +548,8 @@ Below is an example of a basic batch script:
     ibrun -v ../hello_mpi
 ```
 
-### Slurm Partitions
+### Slurm Partitions <a name="slurm-partitions"></a>
+Comet places limits on the number of jobs queued and running on a per group (allocation) and partition basis. Please note that submitting a large number of jobs (especially very short ones) can impact the overall  scheduler response for all users.
 
 <img src="images/comet-queue-names.png" alt="Comet Queue Names" width="500px" />
 
@@ -556,7 +560,7 @@ Specified using -p option in batch script. For example:
 [Back to Top](#top)
 <hr>
 
-### <a name="slurm-commands"></a>Slurm Commands
+### Slurm Commands: <a name="slurm-commands"></a>
 Here are a few key Slurm commands. For more information, run the `man slurm` or see this page:
 
 * To Submit jobs using the `sbatch` command:
@@ -588,6 +592,8 @@ $ squeue -u $USER
       PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                      
     19937 XXXXX     20   0  4304  680  300 R 98.2  0.0   0:19.45 gzip
     ```
+
+Commands that you type into the terminal and run on the sytem are considered *jobs* and they consume resources.  <em>Computationally intensive jobs should be run only on the compute nodes and not the login nodes</em>.
 
 [Back to Top](#top)
 <hr>
