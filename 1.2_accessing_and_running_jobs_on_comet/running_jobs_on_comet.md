@@ -482,14 +482,16 @@ For more information on the GNU compilers: man [gfortran | gcc | g++]
     * [Command Line Jobs](#running-jobs-cmdline)
 
 
-## </a>Running Jobs on Comet <a name="running-jobs">
+## Running Jobs on Comet <a name="running-jobs"></a>
 Comet manages computational work via the Simple Linux Utility for Resource Management (SLURM) batch environment. Comet places limits on the number of jobs queued and running on a per group (allocation) and partition basis. Submitting a large number of jobs (especially very short ones) can impact the overall  scheduler response for all users. If you are anticipating submitting a lot of jobs,  contact the SDSC consulting staff before you submit them. We can work to check if there are bundling options that make your workflow more efficient and reduce the impact on the scheduler
 
 For more details, see the section on Running job in the Comet User Guide:
 http://www.sdsc.edu/support/user_guides/comet.html#running
 
+### Simple  Linux Utility for Resource Management  (SLURM)
+
 <img src="images/slurm.png" alt="Simple Linux Utility for Resource Management" width="500px" />
-Simple  Linux Utility for Resource Management  (SLURM)
+
 * “Glue” for parallel computer to schedule and execute jobs
 * Role: Allocate resources within a cluster
   * Nodes (unique IP address)
