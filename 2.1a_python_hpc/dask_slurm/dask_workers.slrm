@@ -7,6 +7,6 @@
 #SBATCH --export=ALL
 #SBATCH -t 0:20:00
 ### REMOVE RESERVATION AFTER THE SUMMER INSTITUTE
-##SBATCH --reservation=SI2019DAY2
+#SBATCH --reservation=si2020resday2
 
 ibrun --npernode=1 bash ./launch_worker.sh 
