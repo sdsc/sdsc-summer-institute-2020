@@ -8,7 +8,7 @@ Wednesday afternoon of the Summer Institute, we will be holding a Lightning Roun
 longstanding tradition where all participants are asked to present two slides describing (1) their
 work or research and (2) their computational challenges and what they hope to accomplish
 from attending the Summer Institute.
-Download [`template.ppt`](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/3.2_Lightning_round/template.pptt) and edit it with Powerpoint or Google Docs.
+Download [`template.ppt`](https://github.com/sdsc/sdsc-summer-institute-2020/blob/master/3.2_Lightning_round/template.ppt) and edit it with Powerpoint or Google Docs.
 
 Feel free to alter the slides in any way you see fit using your choice of figures, text, fonts, etc.
 We just ask that you limit yourself to two slides and make sure that your name and institution
