@@ -1,0 +1,119 @@
+---
+title: "SI2020_clustering_exercise_v2"
+author: "PFR"
+date: "August 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## --------------------------------------------------
+##    PFR data prep exercises for clustering
+##    using UCI Data Repository winedata
+## --------------------------------------------------
+
+```{r}
+#use setwd("c:/your-path-to-your-project/data/")
+
+X = read.table('winedata.csv',
+                      header=TRUE,sep=",",
+                      stringsAsFactors = TRUE)  #try TRUE
+Y = X[,'Class']
+X = subset(X,select=-c(Class))
+
+plot(X[,'Alcohol'],X[,'Flavas'])
+```
+
+
+## Normalize data
+
+```{r get numeric columns, echo=TRUE}
+
+X_mncntr = scale(X, center=TRUE, scale= TRUE) #normalize to z-scores
+head(X_mncntr,2)
+```
+
+
+## Run Kmeans for several K values
+
+
+```{r kmeans, echo=TRUE}
+
+# Run kmeans for 20 values of K
+kg=matrix(0,20,2)
+for (i in 1:20){
+  ktest=kmeans(X_mncntr,i,20,5);
+  kg[i,1]=i;
+  kg[i,2]=ktest$tot.withinss;  #total withn SSE 
+  }
+plot(kg[,1],kg[,2],main='kmeans within cluster SS')
+
+#try
+#str(ktest)
+
+```
+
+## Now, let's plot the cluster mean values
+
+```{r try 4 clusters, echo=TRUE}
+#get Kmeans for 4 clusters 
+k4_results     = kmeans(X_mncntr,4,20,5)
+
+#get color scheme
+col2use        = c('red','blue','black','yellow')
+
+#get cluster assignment in colors
+colassignments = col2use[k4_results$cluster]
+
+plot(1:dim(X_mncntr)[2],k4_results$center[1,],type='l',col=col2use[1])
+
+for (i in seq(2,4)){
+  points(1:dim(X_mncntr)[2],k4_results$center[i,],type='l',col=col2use[i])
+  }
+
+```
+
+## Now, let's combine the Kmeans cluster information with SVD 
+
+## Exercise: rerun with different components - what does it say about the data and predictability?
+
+```{r combine Kmeans cluster with SVD info, echo=TRUE}
+#get SVD of X_mncntr
+Xsvd = svd(X)
+
+X_proj = as.matrix(X_mncntr) %*% Xsvd$v[,c(1,2)] 
+#or just use Xsvd$u[,c(1,2)] 
+#or use different components beside 1 and 2
+
+plot(X_proj[,1],X_proj[,2],col=colassignments,main='data pts project to 1,2 SVD components, colored by kmeans')
+
+# to plot center points, first project them into components
+c3 = k4_results$centers%*% Xsvd$v[,1:3] 
+points(c3[,1],c3[,2],pch=8,cex=2)   
+#Try different components?
+
+
+```
+
+## Now try coloring by class (using Y mean centered)
+
+
+```{r plot with Y color}
+
+#Y was created in SVD exercise, use it to select 2 colors
+
+#get class assignment in colors
+colassignments = col2use[Y]
+
+plot(X_proj[,1],X_proj[,2],col=colassignments,main='data pts project to 1,2 SVD components, colored by class')
+
+
+
+
+```
+## Extra:  Run a classification model, and color the above scatter plots by each class and correct predictions, or each class and incorrect predictions - what do you think you'll see
+
