@@ -1,9 +1,11 @@
 ---
 title: "Data Exploration on Weather Data"
 author: "SDSC Summer Institute"
-modified: "2020-07-26"
+modified: "2020-08-04"
 date: "`r Sys.time()`"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Preliminaries
@@ -25,17 +27,14 @@ dim(df)
 str(df)             # Structure of dataframe
 ```
 
-
 ```{r}
 head (df)           # First few lines of data
 tail(df)            # Last few lines of data
 ```
 
-
 ```{r}
 names(df)           # Column headers
 ```
-
 
 ```{r}
 summary(df)         # Summary statistics
@@ -50,7 +49,6 @@ sd(df$MinTemp)
 summary(df$MinTemp)
 ```
 
-
 ```{r}
 # Other statistics
 min(df$Date)                                # First date
@@ -61,13 +59,14 @@ sum(df$Rainfall) / length(df$Rainfall)      # Average daily rainfall
 
 ### Remove rows with missing values
 ```{r na}
-
 # Find number of places in dataset where there are missing values
 sum(is.na(df))
 
 # Find number of samples (i.e., rows) without any missing value
 sum(complete.cases(df))
+```
 
+```{r remove-na}
 # Remove rows with any missing value
 dim(df)
 df <- na.omit(df)
@@ -100,6 +99,7 @@ head(df.num,3)
 ```{r corr}
 cor(df.num, use="pairwise")
 ```
+
 ```{r}
 # Look at dataframe structure to determine categorical variables:  Location, WindGustDir, WindDir9am, WindDir3pm, RainToday, RainTomorrow
 str(df)
@@ -107,7 +107,6 @@ str(df)
 
 ### Explore categorical variables
 ```{r ctgVars}
-
 # Levels (categories) for WindGustDir
 levels(df$WindGustDir)
 
@@ -116,7 +115,9 @@ table(df$WindGustDir)
 
 # Sorted number of occurrences for each level
 sort(table(df$WindGustDir))
+```
 
+```{r}
 # Percentage for each WindGustDir category
 round (table(df$WindGustDir) / sum(table(df$WindGustDir)) * 100, digits=2)
 
@@ -127,7 +128,7 @@ sort (round (table(df$WindGustDir) / sum(table(df$WindGustDir)) * 100, digits=2)
 ## Plots for visualizing data
 ### Histogram of Sunshine
 ```{r hist}
-summary(df$Sunshine)
+summary(df$MinTemp)
 hist(df$Sunshine,breaks=10,col="lightblue",main="Histogram of Daily Sunshine",xlab="Sunshine (Hours)")
 ```
 
@@ -192,7 +193,9 @@ ggplot(df, aes(x=as.factor(month(Date)), y=MaxTemp)) + geom_violin(fill="lightbl
 # install.packages("GGally")
 library(GGally)        # R package that extends ggplot2  
 cor(df.num, use = "pairwise")
-ggcorr(df.num, label=TRUE, label_round=2)  # ggcorr uses cor to calculate correlations
+ggcorr(df.num, label=TRUE, 
+       label_round=2, 
+       label_size=3, size=2.5)  # ggcorr uses cor to calculate correlations
 ```
 
 ### Plot pairwise correlation
