@@ -56,6 +56,11 @@ module load cuda
 module load pgi
 ```
 
+If the PGI compilers fail due to a license error you may have to execute the following:
+```
+export LM_LICENSE_FILE=40200@elprado.sdsc.edu:$LM_LICENSE_FILE
+```
+
 Check the Nvidia CUDA compiler version:
 ```
 user@comet:~>nvcc --version
