@@ -1,4 +1,4 @@
-// SDSC Summer Institute 2019
+// SDSC Summer Institute 2020
 // Andreas Goetz (agoetz@sdsc.edu)
 
 // CUDA program to square matrix elements in parallel on the GPU
@@ -21,7 +21,7 @@
 //
 __global__ void square(int *arr, int maxrow, int maxcol){
 
-  int rowinit = /* FIXME */;
+  int rowinit = /* FIXME */
   int colinit = threadIdx.y + blockDim.y * blockIdx.y;
   int rowstride = /* FIXME */
   int colstride = /* FIXME */

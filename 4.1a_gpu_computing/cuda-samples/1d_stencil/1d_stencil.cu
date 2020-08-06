@@ -1,4 +1,4 @@
-// SDSC Summer Institute 2019
+// SDSC Summer Institute 2020
 // Andreas Goetz (agoetz@sdsc.edu)
 
 // CUDA program that performs 1D stencil operation in parallel on the GPU

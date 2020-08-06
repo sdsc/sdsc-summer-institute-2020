@@ -1,4 +1,4 @@
-// SDSC Summer Institute 2019
+// SDSC Summer Institute 2020
 // Andreas Goetz (agoetz@sdsc.edu)
 
 // CUDA program to square matrix elements in parallel on the GPU
