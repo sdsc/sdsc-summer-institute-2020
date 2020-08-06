@@ -1,12 +1,10 @@
 # Preparing for the Summer Institute: Software Requirements
-
-While many of the hands-on activities will be run on Comet, some sessions require that customized software be installed on your laptop. Please perform the following software installations and file downloads prior to the event. Note: several of the preparation activities will provide information and guidance on how to install the required software components.
+Some sessions require that customized software be installed on **your laptop**. Please perform the following software installations and file downloads prior to the event. <br/> *Note: several of the preparation activities will provide information and guidance on how to install the required software components.*
 
 ## Contents <a name="top"></a>
 
  * [Preparation: Using Gitter](#gitter)
  * [Preparation: Using GitHub](#github)
- * [Preparation: Using Jupyter Notebooks](#notebooks)
  * [Parallel sessions: Machine Learning Overview](#mach-learn)
  * [Parallel session: Scientific visualization with Visit ](#visit)
  * [Plenary session: SeedMeLab: Creating data centric websites for researchers and research projects](#seedme)
@@ -14,21 +12,16 @@ While many of the hands-on activities will be run on Comet, some sessions requir
 
 ### Gitter Chat Room <a name="gitter"></a>
 Chat room https://gitter.im/sdsc-summer-institute-2020/community (login with your Github account)
+<br/>Gitter:  Please join each chat room session (login with your Github account). *If there are any issues, please contact events@sdsc.edu.* 
+  * SDSC SI20 Community: <https://gitter.im/sdsc-summer-institute-2020/community> 
+  * Main Session Room: <https://gitter.im/sdsc-summer-institute-2020/Main_Room_Session>
+  * Breakout Room: <https://gitter.im/sdsc-summer-institute-2020/Breakout_Room>
+  * General Logistics:  <https://gitter.im/sdsc-summer-institute-2020/General_Logistics>
+  * Help Desk: <https://gitter.im/sdsc-summer-institute-2020/HelpDesk>
 
 ### Using GitHub<a name="github"></a>
 
 See this quick-start guide: https://github.com/sdsc/sdsc-summer-institute-2020/tree/master/0_preparation/using_github
-
-[Back to Top](#top)
-<hr>
-
-### Preparation: Using Jupyter Notebooks <a name="notebooks"></a>
-
-Some sessions and tutorials will be using *Jupyter Notebooks*. Running Juypter notebooks relies on you handling your own python package installation. It was designed with *Anaconda* in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using *Miniconda*, which is a free minimal installer for *conda* (an open source package management system and environment management system that runs on Windows, macOS and Linux). *conda* is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
-
-For installation and usage instructions, please see the [SDSC Notebooks 101 Tutorial](https://comet-notebooks-101.readthedocs.io/en/comet/)
-
-To learn more about Notebooks, see the [Jupyter/IPython Notebook Quick Start Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
 
 [Back to Top](#top)
 <hr>
@@ -47,11 +40,13 @@ A basic understanding of R will be very helpful and we recommend the following r
 
 ### Parallel session: Scientific visualization with Visit (scheduled opposite Machine Learning Overview) <a name="visit"></a>
 
-Participants who will be attending the Scientific visualization with Visit session on Thursday morning should make the following preparations.
+Participants who will be attending the Scientific visualization with Visit session should make the following preparations.
 
-* Computer, mouse with scroll wheel are required (tablets are not sufficient for this tutorial).
+* Computer, a mouse with scroll wheel is strongly recommended.
 
-* [Download](https://wci.llnl.gov/simulation/computer-codes/visit/executables) and install VisIt version 3.0.1 (**the latest version**). Please do not compile from source unless you are adventurous
+* [Download](https://wci.llnl.gov/simulation/computer-codes/visit/executables) and install VisIt. Please do not compile from source unless you are adventurous.
+   ** On Mac OS Mojave install version 3.1.2
+   ** On all other Operating systems install version 3.0.1. 
 
 * Test run VisIt application on your laptop to make sure it works
 
