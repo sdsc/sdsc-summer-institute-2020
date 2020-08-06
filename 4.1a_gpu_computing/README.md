@@ -131,13 +131,13 @@ cd 1_Utilities/deviceQuery/
 ---
 # Simple code samples accompanying slides
 
-See directory cuda-samples for CUDA sample codes. 
+See directory `cuda-samples` for CUDA sample codes. 
 Compile with 
 ```
 nvcc example.cu -o example.x
 ```
 
-See directory openacc-samples for OpenACC sample codes.
+See directory `openacc-samples` for OpenACC sample codes.
 Compile with 
 ```
 pgcc example.c -o example.x -acc -Minfo=accel
