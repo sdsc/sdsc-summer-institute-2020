@@ -16,6 +16,7 @@ libraries, OpenACC compiler directives, and the CUDA programming
 language. The participants will thus acquire the foundation to use and
 develop GPU aware applications.
 
+---
 # Webinar recording
 A recording of a webinar from April 2019 with abbreviated content is
 available here:
@@ -23,6 +24,7 @@ available here:
 https://education.sdsc.edu/training/interactive/201904_gpu_computing_programming/
 
 
+---
 # Accessing and using GPU nodes on SDSC Comet
 This information has been covered in various places but is repeated
 here for convenience.
@@ -31,7 +33,7 @@ here for convenience.
 Your `.bashrc` file should contain an alias `getgpu` that will give
 you access to a single GPU on SDSC Comet's shared GPU nodes for 3h.
 ```
-# Type the following
+# Execute the following command
 getgpu
 ```
 
@@ -74,33 +76,40 @@ Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
 
 ```
 
-
-# Check installed GPUs with NVIDIA System Management Interface (nvidia-smi)
-`nvidia-smi`
-
-This will also show any currently running jobs on GPUs.
-
-
-# Check visible devices (should be set to free GPU)
-`echo $CUDA_VISIBLE_DEVICES`
-
-This environment variable should be set by the queuing system to the 
-ID of the free GPU.
-
-
-
-NVIDIA CUDA Toolkit code samples
-================================
-
-# Copy and compile CUDA code samples that come with the CUDA Toolkit
-Install into current directory:
+## Check installed GPUs with NVIDIA System Management Interface (nvidia-smi)
+The Nvidia system management interface (`nvidia-smi`) can be used to
+gather information about the available GPUs. 
+It will also show any currently running jobs on GPUs.
 ```
-cuda-install-samples-7.0.sh ./
-cd NVIDIA_CUDA-7.0_Samples
+# Execute the following command to get information about GPUs in the system
+user@comet:~> nvidia-smi
+```
+
+Check visible devices (should be set to free GPU)
+```
+user@comet:~> echo $CUDA_VISIBLE_DEVICES
+```
+This environment variable should be set by the queuing system to the 
+ID of the free GPU. Do not change it.
+
+
+---
+# NVIDIA CUDA Toolkit code samples
+The CUDA Toolkit comes with a set of code samples. 
+It is a good idea to take a look at these code samples as they are a
+very instructive resource. Much can be learned by running the samples
+and inspecting the source code. 
+Some samples are also useful tools (e.g. `deviceQuery`).
+
+Copy the CUDA code samples (current CUDA verson installed on Comet is
+10.1) into the current directory:
+```
+cuda-install-samples-10.1.sh ./
 ```
 
 Compile the samples:
 ```
+cd NVIDIA_CUDA-10.1_Samples
 make -j 6
 ```
 
@@ -110,29 +119,25 @@ cd 1_Utilities/deviceQuery
 make
 ```
 
-
-# Check out the many code samples
-This is a very instructive resource, it is a good idea to have a look
-at these.
-
-
-# Run deviceQuery to query information on available GPUs
+Run deviceQuery to query information on available GPUs
 ```
 cd 1_Utilities/deviceQuery/
 ./deviceQuery
+...
+... lots of information on available GPUs will be printed
+...
 ```
 
+---
+# Simple code samples accompanying slides
 
-Simple code samples accompanying slides
-=======================================
-
-# See directory cuda-samples
+See directory cuda-samples for CUDA sample codes. 
 Compile with 
 ```
 nvcc example.cu -o example.x
 ```
 
-# See directory openacc-samples
+See directory openacc-samples for OpenACC sample codes.
 Compile with 
 ```
 pgcc example.c -o example.x -acc -Minfo=accel
