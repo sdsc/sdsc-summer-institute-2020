@@ -17,7 +17,7 @@ source code.
 ## Hello world
 
 `hello_world_cpu.c`
-Standard C "Hello World" program
+Standard C "Hello World" program.
 Can be compiled with standard C compiler or NVIDIA nvcc CUDA compiler.
 
 `hello_world_cpu2.cu`
