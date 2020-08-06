@@ -32,8 +32,8 @@ pgcc -fast -o jacobi-pgcc.x jacobi.c
 pgf90 -fast -o jacobi-pgf90.x jacobi.f90
 
 # CPU OpenMP parallel version
-pgcc -fast -mp -Minfo=mp -o jacobi-pgcc.x jacobi.c
-pgf90 -fast -mp -Minfo=mp -o jacobi-pgf90.x jacobi.f90
+pgcc -fast -mp -Minfo=mp -o jacobi-pgcc-omp.x jacobi-omp.c
+pgf90 -fast -mp -Minfo=mp -o jacobi-pgf90-omp.x jacobi-omp.f90
 
 # GPU OpenACC version
 pgcc -acc -Minfo=accel -o jacobi-pgcc-acc.x jacobi-acc.c
