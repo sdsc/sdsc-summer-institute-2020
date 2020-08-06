@@ -4,8 +4,8 @@ SDSC Summer Institute
 
 August 6, 2020
 
-Material by Andreas Goetz (agoetz@sdsc.edu)
-partly based on work by Mark Harris - NVIDIA corporation
+Material by Andreas Goetz (agoetz@sdsc.edu).
+Partly based on work by Mark Harris - NVIDIA corporation.
 
 Directory content as explained below. 
 
