@@ -1,0 +1,104 @@
+---
+title: "SI2020_dataprep_exercise_wrangling_wsolutn"
+author: "PFR"
+date: "August 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## --------------------------------------------------
+##    PFR data prep exercises for data wrangling
+## --------------------------------------------------
+
+This is an R Markdown document for data prep exercises.
+
+This exercise is to 'reshape' the data as an example of data wrangling/munging
+
+Also, later is a comparison with 'dplyr' aggregation 
+
+##load data
+```{r load data}
+#use setwd("c:/your-path-to-your-project/data/")
+
+W_df = read.table('weather_orig.csv',
+                      header=TRUE,sep=",",
+                      stringsAsFactors = TRUE)  #try TRUE
+head(W_df)
+
+```
+
+##reshape data 
+First, let's try installing this package.
+'reshape' is in base R, but 'reshape2' is a newer version
+
+
+```{r install (if necessary) and load reshape2}
+if ("reshape2" %in% rownames(installed.packages())==FALSE)
+  { install.packages('reshape2')
+} else {print('reshape2 installed already')}
+library("reshape2")
+
+```
+
+
+##reshape data 
+Now, imagine that each day we want to list a measurement for each wind direction all in the same row.   You might think of it as doing linear regression where each factor level is it's own variable.
+
+1. run this section and notice what the new row looks like,
+Where are the new columns?
+
+Task: Use WindGustDir and WindGustSpeed as variable names to fill in the command below.  The formula indicates that the other variables identify the repeated measurement. 
+
+Which variable labels the repeated measurement, which variable has the measurement value?
+
+
+```{r reshape long to wide, echo=TRUE}
+library(reshape2)
+
+# long to wide: ie 'cast' repeated measure into wide table
+W_wide   =dcast(W_df,  
+              formula=Date+Location+ ...~ WindGustDir,   
+               fill=0,    
+               value.var="WindGustSpeed")   
+
+head(W_wide)
+#optional: write.csv(W_cast,file='Weather_castwide.csv')
+
+```
+
+##To reshape data from wide to long use 'melt' command. Similar packages use names like gather/spread, pivot/unpivot
+
+## Let's try a selection, group by and aggregation in package 'dpylr' 
+```{r}
+if ("dplyr" %in% rownames(installed.packages())==FALSE)
+  { install.packages('dplyr')
+} else {print('dplyr installed already')}
+library("dplyr")
+
+
+```
+## dplyr has some commands to identify groups then summarize data like in SQL.  It is good for quick or one-time operations, but if you have a big dataset it may not be efficient like a true database system
+
+```{r}
+
+#First get group ids, 1 id for each Windgustdir
+a1 <- group_by(na.omit(W_df), WindGustDir)
+a2 <- select(a1,WindSpeed9am,Temp9am)
+a3 <- summarise(a2,
+  avg_speed = mean(WindSpeed9am, na.rm = TRUE),
+  avg_temp  = mean(Temp9am, na.rm = TRUE)
+)
+
+```
+## Now compare means from both 
+```{r}
+
+a3[which(a3[,'WindGustDir']=='ESE'),]
+colMeans(W_wide[which(W_wide$ESE>0),c('WindSpeed9am','Temp9am')])
+```
+
