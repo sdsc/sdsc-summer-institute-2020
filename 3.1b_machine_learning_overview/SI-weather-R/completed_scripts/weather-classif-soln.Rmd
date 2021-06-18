@@ -13,7 +13,7 @@ output:
 ### Read Data
 #### Read in weather data
 ```{r getData}
-df <- readRDS("weather-orig.rds")
+df <- readRDS("/Users/mthomas/SI20/sdsc-summer-institute-2020/JUNK/sdsc-summer-institute-2019/datasci2_machine_learning/weather-orig.rds")
 dim(df)
 head(df)
 tail(df)
@@ -68,8 +68,8 @@ saveRDS(df.tst, "weather-tst.rds")
 ### Classification using Decision Tree
 #### Train model to predict whether it will rain tomorrow
 ```{r tree}
-# install.packages("rpart"")
-# install.packages("rpart.plot"")
+#install.packages("rpart")
+#install.packages("rpart.plot")
 library(rpart)
 library(rpart.plot)             
 
@@ -153,7 +153,7 @@ paste("Error on TEST Data (Pruned Tree): ", err)
 ### Classification using Random Forest
 #### Build random forest model
 ```{r rf}
-# install.packages("randomForest")
+#install.packages("randomForest")
 library(randomForest)
 
 # Build random forest from training data.
